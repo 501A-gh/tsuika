@@ -36,7 +36,7 @@ All existing colors as of the latest version are as show from the following:
 | bg---green   | bg-green        | bg-d-green  |
 | bg---grey    | bg-grey         |             |
 
-### 🎴 Buttons / Links:
+### 🔘 Buttons / Links:
 
 Trim comes with two types of buttons. They can be added through the classes named `button-standad` or `button-rounded` which have rounded corners.
 
