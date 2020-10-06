@@ -38,7 +38,7 @@ All existing colors as of the latest version are as show from the following:
 
 ### 🔘 Buttons / Links:
 
-Trim comes with two types of buttons. They can be added through the classes named `button-standad` or `button-rounded` which have rounded corners.
+Trim comes with two types of buttons. They can be added through the classes named `button-standard` or `button-rounded` which have rounded corners.
 
 ### 📊 Graphs:
 
