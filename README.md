@@ -1,9 +1,10 @@
+![Trim-Logo](Trim-Logo.png)
+
 # Trim v1.1
 
 A design library thats lets you add advanced looking components.
 Trim is written purely using vanilla CSS and aims to provide people with advanced looking components with a simple touch.
-A live example is accessible through the following CodePen link.
-INSERT LINK HERE
+A live example is accessible through [this](https://codepen.io/501A/project/editor/XbnYoK) CodePen link.
 
 ## Contents
 
