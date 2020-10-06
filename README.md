@@ -69,5 +69,3 @@ _Best works with Grid Content Card._
 
 Glance is similar to Effects in the sense that it extends the capability of a grid child object. Writing the `effects-glance-right` or `effects-glance-right` as a class enables the child object to become a pop up when pressed. (This component is good for when you want to condense a large amount of information in one child component)
 _Best works with Grid Content Card._
-
-# Trim

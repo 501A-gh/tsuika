@@ -21,7 +21,7 @@
   opacity: 40%;
 }
 
-/* Buttons・Link */
+/* 🔘 Buttons・Link */
 .button-standard,
 .button-rounded {
   padding: var(--responsivePadding);
@@ -57,7 +57,7 @@
   content: "Link →";
 }
 
-/* Colors🎨 */
+/* 🎨 Colors */
 .bg-salmon {
   background-color: rgb(247, 155, 155);
 }
@@ -104,7 +104,7 @@
   background-color: rgb(109, 112, 119);
 }
 
-/* Bar-Graphs📊 */
+/* 📊 Bar-Graphs */
 .graph-bar {
   border-radius: 7px;
   position: relative;
@@ -149,6 +149,7 @@
   display: grid;
   gap: var(--standardGridGap);
 }
+/* 📱 For Mobile */
 @media only screen and (max-width: 400px) {
   .grid-1fr-1fr,
   .grid-1fr-1fr-1fr,
@@ -188,7 +189,7 @@
   }
 }
 
-/* For Desktop */
+/* 💻 For Desktop */
 @media only screen and (min-width: 601px) {
   .grid-1fr-1fr {
     grid-template-columns: 1fr 1fr;
@@ -244,7 +245,7 @@
   }
 }
 
-/* Cards */
+/* 🎴 Cards */
 .contentCard {
   padding: var(--responsivePadding);
   border-radius: var(--standardBorderRadius);
@@ -269,7 +270,7 @@
   width: 100%;
 }
 
-/* Effects⚡ */
+/* ⚡ Effects */
 .effect-rotation,
 .effect-scale,
 .effect-opacity,
