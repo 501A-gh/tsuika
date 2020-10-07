@@ -1,4 +1,4 @@
-![Trim-Logo](Trim-Logo.png)
+![Trim-Logo](Trim-Banner.png)
 
 # Trim v1.1
 
