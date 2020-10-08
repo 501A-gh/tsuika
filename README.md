@@ -16,7 +16,7 @@ A live example is accessible through [this](https://codepen.io/501A/project/edit
 ## 👉 Getting Started
 
 Anybody can get started with Trim by inserting the following above the `</head>` tag.
-`<link></link>`
+`<link href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/Trim.css" rel="stylesheet" />`
 
 <a name="acn"></a>
 
