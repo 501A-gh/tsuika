@@ -5,23 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trim Testbed</title>
     <link href="Trim.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/501A-Designs/Palette/Palette.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Trim v1.1</h1>
     <!--BUTTONS-->
-    <button
-      class="button-standard effect-opacity"
-      style="font-size: 15px"
-      href="#"
-    >
+    <button class="button-standard fx-opacity" style="font-size: 15px" href="#">
       Button-A
     </button>
 
-    <button
-      class="button-rounded effect-scale"
-      style="font-size: 15px"
-      href="#"
-    >
+    <button class="button-rounded fx-scale" style="font-size: 15px" href="#">
       Button-B
     </button>
 
@@ -55,7 +51,7 @@
     <div class="grid-1fr-1fr-1fr-1fr">
       <section>
         <div
-          class="effect-rotation bg---green"
+          class="fx-rotation bg---green"
           onclick="window.location='http://google.com'"
         >
           <h1>Hello World</h1>
@@ -69,7 +65,7 @@
       </section>
       <section>
         <div
-          class="effect-opacity bg---blue"
+          class="fx-opacity bg---blue"
           onclick="window.location='http://google.com'"
         >
           <h1>Hello World</h1>
@@ -83,7 +79,7 @@
       </section>
       <section>
         <div
-          class="effect-blur bg-d-blue"
+          class="fx-blur bg-d-blue"
           onclick="window.location='http://google.com'"
         >
           <h1>Hello World</h1>
@@ -97,7 +93,7 @@
       </section>
       <section>
         <div
-          class="effect-scale bg---green"
+          class="fx-scale bg---green"
           onclick="window.location='http://google.com'"
         >
           <h1>Hello World</h1>
@@ -110,7 +106,7 @@
         </div>
       </section>
       <section>
-        <div class="effect-glance-left bg---blue">
+        <div class="fx-active-glance bg---blue">
           <h1>Hello World</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
@@ -121,7 +117,7 @@
         </div>
       </section>
       <section>
-        <div class="effect-glance-left bg---red">
+        <div class="fx-active-glance">
           <h1>Hello World</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
@@ -132,7 +128,7 @@
         </div>
       </section>
       <section>
-        <div class="effect-glance-right bg-red">
+        <div class="fx-active-glance">
           <h1>Hello World</h1>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eum
@@ -148,17 +144,34 @@
           </p>
         </div>
       </section>
-      <section>
-        <div class="effect-glance-right bg-salmon">
-          <h1>Hello World</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
-            accusamus consequatur sequi iste, maiores iure voluptatum doloremque
-            laborum praesentium culpa excepturi explicabo officia vero
-            voluptatem itaque provident omnis dicta neque?
-          </p>
-        </div>
-      </section>
     </div>
+
+    <section>
+      <div class="contentCard bg-salmon">
+        <h1>Hello World</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+          accusamus consequatur sequi iste, maiores iure voluptatum doloremque
+          laborum praesentium culpa excepturi explicabo officia vero voluptatem
+          itaque provident omnis dicta neque?
+        </p>
+      </div>
+    </section>
+
+    <details>
+      <summary class="contentCard bg---green">Container</summary>
+      <p class="fx-load-wave contentCard bg-salmon">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
+        necessitatibus fugiat quis quod quo odit? Atque voluptatum perferendis
+        dolorum sed omnis voluptas odit pariatur sapiente ut obcaecati adipisci,
+        sunt eum.
+      </p>
+    </details>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </body>
 </html>

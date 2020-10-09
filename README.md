@@ -1,10 +1,9 @@
 ![Trim-Logo](Trim-Banner.png)
 
-# Trim v1.1
+# Trim v1.2
 
 A design library thats lets you add advanced looking components.
 Trim is written purely using vanilla CSS and aims to provide people with advanced looking components with a simple touch.
-A live example is accessible through [this](https://codepen.io/501A/project/editor/XbnYoK) CodePen link.
 
 ## Contents
 
@@ -24,24 +23,20 @@ Anybody can get started with Trim by inserting the following above the `</head>`
 />
 ```
 
+You can also insert the Palette CDN which will enable you to easily add color components:
+
+```html
+<link
+  href="https://cdn.jsdelivr.net/gh/501A-Designs/Palette/Palette.css"
+  rel="stylesheet"
+/>
+```
+
+Click [here](https://github.com/501A-Designs/Palette/blob/master/Palette.css) to learn more about Palette.
+
 <a name="acn"></a>
 
 ## About Class Naming
-
-### 🎨 Colors:
-
-The background color of any component can be easily changed using the `bg-colorname` class.
-Using the `bg---colorname` class will make the selected background color lighter.
-Using the `bg-d-colorname` class will make the selected background color darker.
-All existing colors as of the latest version are as show from the following:
-
-| Light Colors | Standard Colors | dark Colors |
-| ------------ | --------------- | ----------- |
-|              | bg-salmon       |             |
-| bg---red     | bg-red          | bg-d-red    |
-| bg---blue    | bg-blue         | bg-d-blue   |
-| bg---green   | bg-green        | bg-d-green  |
-| bg---grey    | bg-grey         |             |
 
 ### 🔘 Buttons / Links:
 
@@ -57,22 +52,37 @@ Content cards are `section` tags with the class of `contentCard` that enable you
 
 ### 🔳 Simple Grid:
 
-You can use CSS grid by simply adding `grid-1fr-1fr-1fr...` as a class to a component. However, this grid can only support up to 6 columns at max (`grid-1fr-1fr-1fr-1fr-1fr-1fr`). Note: If you add the `section` tag as a child component of the Simple Grid class, it will be formatted into a Content Card (Grid Content Card).
+You can use CSS grid by simply adding `grid-1fr-1fr-1fr...` as a class to a component. However, this grid can only support up to 6 columns at max (`grid-1fr-1fr-1fr-1fr-1fr-1fr`). Note: If you add the `section` tag as a child component of the Simple Grid class, it will be formatted into a Content Card (Grid Content Card). You can also use the `grid-auto` class, which will create a grid that is automatically laid out depending on the number of components you have.
 
 ### ⚡ Effects:
 
-Effects extend the child components `:hover` capabilities inside your grid. Add an effect to one of your child components by inserting the `effect-effectname` class. All effects as of the latest version are as show from the following:
+Effects extend the child components capabilities inside your grid. Add an effect to one of your child components by inserting the `fx-effecttype-effectname` class. All effects as of the latest version are as show from the following:
 
-| Class Name      | Effect on hover |
-| --------------- | --------------- |
-| effect-rotation | Rotates in 3D   |
-| effect-scale    | Scales          |
-| effect-opacity  | Lowers Opacity  |
-| effect-blur     | Blurs           |
+#### ☝ Hover:
+
+The below are all effects that are initiated using the `:hover` element. `:hover` is the only element where you would not need to write the effecttype.
+
+| Class Name  | Effect on hover |
+| ----------- | --------------- |
+| fx-rotation | Rotates in 3D   |
+| fx-scale    | Scales          |
+| fx-opacity  | Lowers Opacity  |
+| fx-blur     | Blurs           |
 
 _Best works with Grid Content Card._
 
-### 👀 Glance (Left & Right):
+#### 👀 Glance:
 
-Glance is similar to Effects in the sense that it extends the capability of a grid child object. Writing the `effects-glance-right` or `effects-glance-right` as a class enables the child object to become a pop up when pressed. (This component is good for when you want to condense a large amount of information in one child component)
+Glance is initiated using the `:active` element. Writing the `fx-active-glance` as a class enables the child object to become a pop up when pressed. (This component is good for when you want to condense a large amount of information in one child component)
 _Best works with Grid Content Card._
+
+#### 🔃 Load:
+
+The `fx-load-effectname` class will be enabled when the webpage has loaded. This component is good for when you want to create page transitions, or when creating simple drawers with animations.
+
+| Class Name   | Effect on load                        |
+| ------------ | ------------------------------------- |
+| fx-load-wave | Shows content with a radiating circle |
+| fx-load-open | Shows content from top to bottom      |
+
+_Best works with `<details>` and `<summary>` HTML tags._

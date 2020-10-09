@@ -10,8 +10,8 @@
   --standardBorderRadius: 5px;
   --transitionSpeed: 0.5s;
   --standardGridGap: 5px;
-  --standardGrey: #e7e7e7;
   --standardBoxShadow: 8px 8px 25px grey;
+  --darkBoxShadow: 10px 10px 30px rgb(44, 44, 44);
   --standardScale: scale3d(1.05, 1.05, 1.05);
 }
 
@@ -57,53 +57,6 @@
   content: "Link →";
 }
 
-/* 🎨 Colors */
-.bg-salmon {
-  background-color: rgb(247, 155, 155);
-}
-.bg-d-red {
-  background-color: rgb(128, 25, 25);
-  color: white;
-}
-.bg-red {
-  background-color: rgb(202, 54, 54);
-  color: white;
-}
-.bg---red {
-  background-color: rgb(252, 61, 61);
-}
-.bg-d-blue {
-  background-color: rgb(47, 69, 134);
-  color: white;
-}
-.bg-blue {
-  background-color: rgb(86, 120, 223);
-  color: white;
-}
-.bg---blue {
-  background-color: rgb(142, 165, 233);
-}
-.bg-d-green {
-  background-color: #195719;
-  color: white;
-}
-.bg-green {
-  background-color: #359135;
-}
-.bg---green {
-  background-color: #83cc83;
-}
-.bg-black {
-  background-color: rgb(45, 45, 48);
-  color: white;
-}
-.bg---grey {
-  background-color: var(--standardGrey);
-}
-.bg-grey {
-  background-color: rgb(109, 112, 119);
-}
-
 /* 📊 Bar-Graphs */
 .graph-bar {
   border-radius: 7px;
@@ -118,7 +71,7 @@
   margin: var(--standardMargin);
   height: 17px;
   position: relative;
-  animation-name: graphicbar;
+  animation-name: bargraphAni;
   animation-duration: 2s;
   animation-timing-function: ease-out;
 }
@@ -128,9 +81,8 @@
   position: relative;
   width: auto;
 }
-
 /* 💨 Graph Animation */
-@keyframes graphicbar {
+@keyframes bargraphAni {
   0% {
     background-color: rgb(235, 235, 235);
     width: 0%;
@@ -141,6 +93,11 @@
 > 🔳 Grid
 > 👀 Card Glance Effect
 */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
 .grid-1fr-1fr,
 .grid-1fr-1fr-1fr,
 .grid-1fr-1fr-1fr-1fr,
@@ -171,20 +128,16 @@
 
 /* Both (~600px) */
 @media only screen and (max-width: 600px) {
-  .effect-glance-right,
-  .effect-glance-left {
+  .fx-active-glance {
     overflow-y: auto;
   }
-  .effect-glance-right::-webkit-scrollbar,
-  .effect-glance-left::-webkit-scrollbar {
-    width: 6px;
+  .fx-active-glance::-webkit-scrollbar {
+    width: 4px;
   }
-  .effect-glance-right::-webkit-scrollbar-track,
-  .effect-glance-left::-webkit-scrollbar-track {
+  .fx-active-glance::-webkit-scrollbar-track {
     opacity: 50%;
   }
-  .effect-glance-right::before,
-  .effect-glance-left::before {
+  .fx-active-glance::before {
     content: none;
   }
 }
@@ -206,41 +159,36 @@
   .grid-1fr-1fr-1fr-1fr-1fr-1fr {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
-  .effect-glance-left,
-  .effect-glance-right {
+  .fx-active-glance {
     overflow: hidden;
   }
-  .effect-glance-right:active,
-  .effect-glance-left:active {
+
+  .fx-active-glance:active {
     user-select: none;
-    position: relative;
-    margin: auto;
-    width: 150%;
+    margin: none;
+    width: 50%;
     height: auto;
+
+    background-image: none;
     max-height: none;
     border-radius: calc(var(--standardBorderRadius) * 3);
-    box-shadow: var(--standardBoxShadow);
-    background-image: none;
-    opacity: 95%;
-  }
-  .effect-glance-right:active {
-    transform: translate(-50%, -20%) var(--standardScale);
+    box-shadow: var(--darkBoxShadow);
     z-index: 2;
+
+    position: fixed;
+    top: calc(25% - 25px);
+    right: calc(25% - 25px);
+
+    transform: var(--standardScale);
   }
-  .effect-glance-left:active {
-    transform: translate(20%, -20%) var(--standardScale);
-    z-index: 2;
-  }
-  .effect-glance-right::before,
-  .effect-glance-left::before {
+  .fx-active-glance::before {
     content: "Long Press To View";
     font-size: 0.8em;
     opacity: 60%;
     font-weight: bold;
   }
 
-  .effect-glance-right:active::before,
-  .effect-glance-left:active::before {
+  .fx-active-glance:active::before {
     content: none;
   }
 }
@@ -251,6 +199,7 @@
   border-radius: var(--standardBorderRadius);
   cursor: pointer;
 }
+.grid-auto div,
 .grid-1fr-1fr section div,
 .grid-1fr-1fr-1fr section div,
 .grid-1fr-1fr-1fr-1fr section div,
@@ -260,6 +209,7 @@
   border-radius: var(--standardBorderRadius);
   cursor: pointer;
 }
+.grid-auto section img,
 .grid-1fr-1fr section img,
 .grid-1fr-1fr-1fr section img,
 .grid-1fr-1fr-1fr-1fr section img,
@@ -271,40 +221,72 @@
 }
 
 /* ⚡ Effects */
-.effect-rotation,
-.effect-scale,
-.effect-opacity,
-.effect-blur,
-.effect-glance-right,
-.effect-glance-left {
+.fx-rotation,
+.fx-scale,
+.fx-opacity,
+.fx-blur,
+.fx-load-open,
+.fx-active-glance {
   transition: var(--transitionSpeed);
 }
-.effect-rotation:hover {
+
+.fx-rotation:hover {
   transform: rotateX(40deg) rotateY(-0.5deg) rotateZ(-1.5deg);
   box-shadow: 10px 30px 20px grey;
   cursor: pointer;
 }
-.effect-scale:hover {
+.fx-scale:hover {
   transform: var(--standardScale);
   box-shadow: var(--standardBoxShadow);
   cursor: pointer;
 }
-.effect-opacity:hover {
+.fx-opacity:hover {
   opacity: 60%;
   cursor: pointer;
 }
-.effect-blur:hover {
+.fx-blur:hover {
   filter: blur(3px);
   cursor: pointer;
 }
-.effect-glance-right,
-.effect-glance-left {
+.fx-active-glance {
   height: 100%;
   max-height: 180px;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
   background-image: linear-gradient(
     to bottom,
     transparent,
     85%,
     rgb(97, 97, 97)
   );
+}
+
+.fx-load-wave {
+  animation: openAni var(--transitionSpeed) ease-in;
+}
+
+@keyframes openAni {
+  0% {
+    clip-path: circle(0% at 0% 0%);
+    opacity: 50%;
+  }
+  100% {
+    clip-path: circle(100%);
+    opacity: 100%;
+  }
+}
+
+.fx-load-open {
+  animation: dropAni var(--transitionSpeed) ease-in;
+}
+
+@keyframes dropAni {
+  0% {
+    clip-path: inset(0% 0% 100% 0%);
+    opacity: 50%;
+  }
+  100% {
+    clip-path: inset(0% 0% 0% 0%);
+    opacity: 100%;
+  }
 }
