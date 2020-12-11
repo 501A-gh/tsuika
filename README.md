@@ -1,4 +1,4 @@
-# Trim v1.3
+# Trim v1.4
 
 A design library thats lets you add advanced looking components.
 Trim is written purely using vanilla CSS and aims to provide people with advanced looking components with a simple touch.
@@ -43,6 +43,7 @@ Pre-Styled Components
 - [🔘 Buttons / Links](#btn\lnks)
 - [📊 Graphs](#grphs)
 - [🎴 Content Cards](#cc)
+- [📃 Styled Ordered List](#sol)
 
 Formatting / Position:
 
@@ -73,6 +74,26 @@ Graphs can be inserted by adding the class `graph-bar` which creates a single ho
 ### 🎴 Content Cards:
 
 Content cards are `section` tags with the class of `contentCard` that enable you to show your information in a pre-styled card format.
+
+<a name="sol"></a>
+
+### 📃 Styled Ordered Lists:
+
+Adding the `id` with the names below will enable you to add styles to the number of your ordered list (Ordered list are use numerical values).
+
+| Id Name      | List Style                             |
+| ------------ | -------------------------------------- |
+| ol-round     | Adds a circle around the number        |
+| ol-capsule   | Adds a capsule shape around the number |
+| ol-rectangle | Adds a rectangle around the number     |
+| ol-square    | Adds a square around the number        |
+
+_Add the id's to the `ol` tag_
+
+You can also additionally style the color of the numbers and background by adding the `::before` pseudo class to your `id`'s `li` tag.
+
+Example:
+`ol-round li::before`
 
 <a name="sg"></a>
 
