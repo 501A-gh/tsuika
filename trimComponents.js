@@ -6,8 +6,8 @@ template.innerHTML = `
     .glass-card{
       border-radius:20px;
       padding:20px 15px 20px 15px;
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(35px);
+      backdrop-filter: blur(35px);
       z-index:3;
       box-shadow:1px 1px 10px lightgrey;
     }
@@ -76,8 +76,8 @@ template.innerHTML = `
     box-shadow: -5px 0 10px white, 1px 1px 10px lightgrey;
     transition: 0.5s;
     margin-right: -50px;
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
     overflow: hidden;
     transition: 0.5s;
   }
@@ -202,8 +202,8 @@ template.innerHTML = `
       padding:15px;
       border-radius:15px;
       max-height: 180px;
-      -webkit-backdrop-fil55ter: blur(20px);
-      backdrop-filter: blur(20px);
+      -webkit-backdrop-fil55ter: blur(35px);
+      backdrop-filter: blur(35px);
       background-image: linear-gradient(
         to bottom,
         transparent,
