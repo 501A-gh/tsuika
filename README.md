@@ -6,7 +6,7 @@ Trim Design Tools aims to provide people advanced looking components with a simp
 Using only Trim can be fairly limiting, so it is advised to modify the CSS so that it can suit your needs more personally.
 
 ## v1.5 New Features:
-- Glass Card Web Comsponent
+- Glass Card Web Component
 - Flex Card Web Component
 - Bar Graph Web Component
 - Glance Card Web Component
@@ -18,7 +18,7 @@ Using only Trim can be fairly limiting, so it is advised to modify the CSS so th
 ## 💡 Contents
 
 1. [Getting Started](#gs)
-2. [About Class Naming](#acn)
+2. [Documentation](#acn)
 
 <a name="gs"></a>
 
@@ -39,7 +39,8 @@ Since v1.5, Trim has supported webcomponents. Access them by inserting the CDN a
 <script src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/trimComponents.js" defer></script>
 ```
 
-You can also insert the Palette CDN which will enable you to easily add color components:
+Optional:
+You can also insert the Palette CDN which will enable you to easily add color via `class`:
 
 ```html
 <link
@@ -57,7 +58,6 @@ Click [here](https://github.com/501A-Designs/Palette#readme) to learn more about
 Pre-Styled Components
 
 - [🔘 Buttons / Links](#btn\lnks)
-- [📊 Graphs](#grphs)
 - [🎴 Content Cards](#cc)
 - [📃 Styled Ordered List](#sol)
 
@@ -69,12 +69,16 @@ Formatting / Position:
 Using Pseudo Elements:
 
 - [☝ Hover](#hvr)
-- [👀 Glance](#glc)
 - [🔃 Load](#load)
-- [🔛 ＋ 🎴 Flex Cards](#fcs)
+
+
+## ⚠ Web Components Naming
 
 Trim Components:
 - [💳 Glass Card](#gc)
+- [📊 Graphs](#grphs)
+- [🔛 ＋ 🎴 Flex Cards](#fcs)
+- [👀 Glance Cars](#glc)
 
 
 <a name="btn/lnks"></a>
@@ -82,12 +86,6 @@ Trim Components:
 ### 🔘 Buttons / Links:
 
 Trim comes with two types of buttons. They can be added through the classes named `button-standard` or `button-rounded` which have rounded corners.
-
-<a name="grphs"></a>
-
-### 📊 Graphs:
-
-Graphs can be inserted by adding the class `graph-bar` which creates a single horizontal bar-graph. The `graph-multi-bar` class enables you to nest multiple bar graphs with the addition of labels if necessary.
 
 <a name="cc"></a>
 
@@ -134,10 +132,6 @@ You can create a CSS flex box by adding the following class names to any parent 
 | flex-center   | justify-content: center; |
 | flex-left     | justify-content: left;   |
 
-<!-- ### ⚡ Effects:
-
-Effects extend the child components capabilities inside your grid. Add an effect to one of your child components by inserting the `fx-effecttype-effectname` class. All effects as of the latest version are as show from the following: -->
-
 <a name="hvr"></a>
 
 ### ☝ Hover:
@@ -154,13 +148,6 @@ Hover is initiated using the `:hover` pseudo element. Writing the `hover-classna
 
 _Best works with Grid Content Card. `hover-arrow` works best with buttons_
 
-<a name="glc"></a>
-
-### 👀 Glance:
-
-Glance is initiated using the `:active` pseudo element. Writing the `active-glance` as a class enables the child object to become a pop up when pressed. (This component is good for when you want to condense a large amount of information in one child component)
-_Best works with Grid Content Card._
-
 <a name="load"></a>
 
 ### 🔃 Load:
@@ -175,16 +162,33 @@ The `load-effectname` class will be enabled when the webpage has loaded. This co
 
 _`wave` and `open` best work with the `<details>` and `<summary>` HTML tags._
 
-<a name="fcs"></a>
 
-### 🔛 ＋ 🎴 Flex Cards:
-
-Flex cards utilize the flex box property and enables you to add a horizontally flowing card layout for displaying your short content.
-Any `section` or `div` tag under the `flex-cards` class becomes part of the flex card.
+## Trim v1.5 Web Components
 
 <a name="gc"></a>
 
 ### 💳 Glass Cards:
 
-Flex cards utilize the flex box property and enables you to add a horizontally flowing card layout for displaying your short content.
-Any `section` or `div` tag under the `flex-cards` class becomes part of the flex card.
+The glass cards component enables you to aestheically pleasing froasted glass effect.
+The component is structured with a `<h1>`,`<p>` and `<button>` tag.
+The `<h1>` tag can be accessed through the `header` attribute.
+The `button`'s display name can be changed through the `btn` attribute, and its link can be made through the `btnHref` attribute.
+
+<a name="grphs"></a>
+
+### 📊 Graphs:
+
+Graphs can be inserted by adding the `<bar-graph></bar-graph>` element, which creates a single horizontal bar-graph. The length of the bar-graph is decided by the `%` attribute. The `color` attribute enables you to change the color of the bar graph, and the `graphColor` attribute changes the graph containers color.
+
+<a name="fcs"></a>
+
+### 🔛 ＋ 🎴 Flex Cards:
+
+Flex cards utilize the flex box property and enables you to add a horizontally flowing card layout for displaying your short content. Use  the `<flex-card></flex-card>` element under the a section that has a `style` property of `display: flex; flex-direction: row;` or use the `flex-cards` class in the Trim class CDN.
+
+<a name="glc"></a>
+
+### 👀 Glance Card:
+
+Glance is initiated using the `<glance-card>` element. A title can be added using the `header` attribute.
+_Best works with CSS Grid._
