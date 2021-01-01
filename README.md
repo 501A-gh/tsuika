@@ -1,9 +1,19 @@
-# Trim v1.4
+# Trim v1.5
 
 A design library thats lets you add advanced looking components.
-Trim is written purely using vanilla CSS and aims to provide people with advanced looking components with a simple touch.
+Trim Design Tools aims to provide people advanced looking components with a simple touch.
 
-![Trim-Logo](Trim-Banner.png)
+Using only Trim can be fairly limiting, so it is advised to modify the CSS so that it can suit your needs more personally.
+
+## v1.5 New Features:
+- Glass Card Web Comsponent
+- Flex Card Web Component
+- Bar Graph Web Component
+- Glance Card Web Component
+- Arrow Buttons
+
+
+![Trim-Logo](trimBanner.png)
 
 ## 💡 Contents
 
@@ -18,9 +28,15 @@ Anybody can get started with Trim by inserting the following above the `</head>`
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/Trim.css"
+  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/trim.css"
   rel="stylesheet"
 />
+```
+
+Since v1.5, Trim has supported webcomponents. Access them by inserting the CDN above the `</head>` tag.
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/trimComponents.js" defer></script>
 ```
 
 You can also insert the Palette CDN which will enable you to easily add color components:
@@ -56,6 +72,10 @@ Using Pseudo Elements:
 - [👀 Glance](#glc)
 - [🔃 Load](#load)
 - [🔛 ＋ 🎴 Flex Cards](#fcs)
+
+Trim Components:
+- [💳 Glass Card](#gc)
+
 
 <a name="btn/lnks"></a>
 
@@ -124,14 +144,15 @@ Effects extend the child components capabilities inside your grid. Add an effect
 
 Hover is initiated using the `:hover` pseudo element. Writing the `hover-classname` as a class name enables the object an effect when hovered.
 
-| Class Name     | Effect on hover |
-| -------------- | --------------- |
-| hover-rotation | Rotates in 3D   |
-| hover-scale    | Scales          |
-| hover-opacity  | Lowers Opacity  |
-| hover-blur     | Blurs           |
+| Class Name     | Effect on hover          |
+| -------------- | ------------------------ |
+| hover-rotation | Rotates in 3D            |
+| hover-scale    | Scales                   |
+| hover-opacity  | Lowers Opacity           |
+| hover-blur     | Blurs                    |
+| hover-arrow    | Adds an arrow at the end |
 
-_Best works with Grid Content Card._
+_Best works with Grid Content Card. `hover-arrow` works best with buttons_
 
 <a name="glc"></a>
 
@@ -157,6 +178,13 @@ _`wave` and `open` best work with the `<details>` and `<summary>` HTML tags._
 <a name="fcs"></a>
 
 ### 🔛 ＋ 🎴 Flex Cards:
+
+Flex cards utilize the flex box property and enables you to add a horizontally flowing card layout for displaying your short content.
+Any `section` or `div` tag under the `flex-cards` class becomes part of the flex card.
+
+<a name="gc"></a>
+
+### 💳 Glass Cards:
 
 Flex cards utilize the flex box property and enables you to add a horizontally flowing card layout for displaying your short content.
 Any `section` or `div` tag under the `flex-cards` class becomes part of the flex card.
