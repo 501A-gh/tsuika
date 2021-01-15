@@ -18,13 +18,17 @@ template.innerHTML = `
     .glass-card button{
       outline:none;
       border: none;
-      padding:5px 10px 5px 10px;
       margin: 20px 0px -10px 0px;
-      font-size:18px;
       background-color:lightgrey;
       border-radius:10px;
-      transition: 0.5s;
       opacity:70%;
+
+      padding: 1em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      border: none;
+      transition: 0.5s;
+      font-weight:bold;
     }
     .glass-card button:hover{
       cursor:pointer;
@@ -84,22 +88,23 @@ template.innerHTML = `
   .flex-card button{
     outline:none;
     border: none;
-    padding:5px 10px 5px 10px;
     margin: 20px 0px -10px 0px;
-    font-size:18px;
     background-color:lightgrey;
     border-radius:10px;
-    transition: 0.5s;
     opacity:70%;
+
+    padding: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: none;
+    transition: 0.5s;
+    font-weight: bold;
   }
   .flex-card:hover{
     overflow: auto;
     cursor: pointer;
     user-select: none;
-    z-index: 3;
-    transform: scale3d(1.02, 1.02, 1.02) translateY(50px);
-    margin-right: 30px;
-    height: auto;
+    z-index: 2;
   }
   .flex-cards:last-child {
     margin-right: 10px;
@@ -111,6 +116,31 @@ template.innerHTML = `
   }
   .flex-card button:hover::after{
     content:" →";
+  }
+  @media only screen and (max-width: 400px) {
+    .flex-card:hover{
+      transform: translateY(-5px);
+      margin-right: 10px;
+      max-width:300px;
+      min-width:150px;
+      overflow-y:auto;
+    }
+  }
+  @media only screen and (min-width: 401px) and (max-width: 600px) {
+    .flex-card:hover{
+      transform: translateY(-10px);
+      margin-right: 20px;
+      height: 230px;
+      min-width:175px;
+    }
+  }
+  @media only screen and (min-width: 601px) {
+    .flex-card:hover{
+      transform: translateY(-15px);
+      margin-right: 30px;
+      height: auto;
+      min-width:200px;
+    }
   }
   </style>
   <section class="flex-card">
@@ -153,7 +183,6 @@ template.innerHTML = `
     }
     .bar-graph div {
       border-radius: 5px;
-      margin: 5px;
       height: 20px;
       position: relative;
       animation: bargraphAni 1s ease-in;
@@ -192,7 +221,6 @@ class barGraph extends HTMLElement {
   }
 }
 window.customElements.define('bar-graph', barGraph);
-
 
 // GLANCE CARD
 template.innerHTML = `
@@ -253,3 +281,118 @@ class glanceCard extends HTMLElement {
   }
 }
 window.customElements.define('glance-card', glanceCard);
+
+// STANDARD BUTTON
+template.innerHTML = `
+  <style>
+    .btn-standard {
+      padding: 1em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      border: none;
+      transition: 0.5s;
+      font-weight:bold;
+      outline:none;
+      border: none;
+      background-color:lightgrey;
+      border-radius:10px;
+      opacity:70%;
+    }
+    .btn-standard:hover {
+      cursor:pointer;
+    }
+  </style>
+  <button class="btn-standard">
+  </button>
+`;
+class standardBtn extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.querySelector('button').innerText = this.innerHTML;
+    const link = this.getAttribute('btnHref');
+    const fontPixel = this.getAttribute('btnSize') || this.getAttribute('size');
+    const btnColor = this.getAttribute('buttonColor') || this.getAttribute('btnColor');
+    const txtColor = this.getAttribute('textColor') || this.getAttribute('txtColor');
+
+    this.shadowRoot.querySelector('button').addEventListener('click', function(){
+      window.location.href=`${link}`;
+    });
+    this.shadowRoot.querySelector('button').setAttribute('style', `font-size:${fontPixel}px; background-color:${btnColor}; color:${txtColor};`);
+  }
+}
+window.customElements.define('standard-btn', standardBtn);
+
+// HIGHLIGHT LINK
+template.innerHTML = `
+  <style>
+    .highlight-link {
+      text-decoration: none;
+      color: black;
+      opacity: 50%;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    .highlight-link:hover {
+      border-radius: 3px;
+      padding-right: 0.1em;
+      margin-left: -0.1em;
+      margin-right: -0.1em;
+      padding-left: 0.1em;
+      background-color: grey;
+      opacity: 100%;
+      color: white;
+    }
+  </style>
+  <a class="highlight-link">
+  </a>
+`;
+class highlightLink extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.querySelector('a').innerText = this.innerHTML;
+    const link = this.getAttribute('linkHref');
+    this.shadowRoot.querySelector('a').setAttribute('href', `${link}`);
+  }
+}
+window.customElements.define('highlight-link', highlightLink);
+
+// UNDERLINED LINK
+template.innerHTML = `
+  <style>
+    .underline-link {
+      cursor: pointer;
+      color: black;
+      opacity: 50%;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    .underline-link:hover{
+      text-decoration:none;
+      border-radius: 3px;
+      padding-right: 0.1em;
+      margin-left: -0.1em;
+      margin-right: -0.1em;
+      padding-left: 0.1em;
+      background-color: grey;
+      opacity: 100%;
+      color: white;
+    }
+  </style>
+  <a class="underline-link"></a>
+`;
+class underlineLink extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.querySelector('a').innerText = this.innerHTML;
+    const link = this.getAttribute('linkHref');
+    this.shadowRoot.querySelector('a').setAttribute('href', `${link}`);
+  }
+}
+window.customElements.define('underline-link', underlineLink);
+

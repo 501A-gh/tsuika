@@ -1,16 +1,15 @@
-# Trim v1.5
+# Trim v1.6
 
 A design library thats lets you add advanced looking components.
 Trim Design Tools aims to provide people advanced looking components with a simple touch.
 
 Using only Trim can be fairly limiting, so it is advised to modify the CSS so that it can suit your needs more personally.
 
-## v1.5 New Features:
-- Glass Card Web Component
-- Flex Card Web Component
-- Bar Graph Web Component
-- Glance Card Web Component
-- Arrow Buttons
+## v1.6 New Features:
+- Button Web Component
+- Link Web Component
+- Responsive Design for flex-card
+- Content Card class adjusted
 
 
 ![Trim-Logo](trimBanner.png)
@@ -55,9 +54,8 @@ Click [here](https://github.com/501A-Designs/Palette#readme) to learn more about
 
 ## ⚠ About Class Naming
 
-Pre-Styled Components
+Pre-Styled Classes
 
-- [🔘 Buttons / Links](#btn\lnks)
 - [🎴 Content Cards](#cc)
 - [📃 Styled Ordered List](#sol)
 
@@ -75,17 +73,12 @@ Using Pseudo Elements:
 ## ⚠ Web Components Naming
 
 Trim Components:
+- [🔘 Buttons / Links](#btn\lnks)
 - [💳 Glass Card](#gc)
 - [📊 Graphs](#grphs)
 - [🔛 ＋ 🎴 Flex Cards](#fcs)
 - [👀 Glance Cars](#glc)
 
-
-<a name="btn/lnks"></a>
-
-### 🔘 Buttons / Links:
-
-Trim comes with two types of buttons. They can be added through the classes named `button-standard` or `button-rounded` which have rounded corners.
 
 <a name="cc"></a>
 
@@ -163,7 +156,13 @@ The `load-effectname` class will be enabled when the webpage has loaded. This co
 _`wave` and `open` best work with the `<details>` and `<summary>` HTML tags._
 
 
-## Trim v1.5 Web Components
+## Trim Web Components
+
+<a name="btn/lnks"></a>
+
+### 🔘 Buttons / Links:
+
+Trim comes with two types of links and a button. They can be added through using the `<highlight-link>` and `<underline-link>` components. The button can be called using the `<standard-btn>` component.
 
 <a name="gc"></a>
 
