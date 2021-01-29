@@ -33,7 +33,6 @@ template.innerHTML = `
     .glass-card button:hover{
       cursor:pointer;
       opacity:100%;
-      box-shadow: 2px 2px 5px grey;
     }
     .glass-card button:hover::after{
       content:" →";
@@ -112,7 +111,6 @@ template.innerHTML = `
   .flex-card button:hover{
     cursor:pointer;
     opacity:100%;
-    box-shadow: 2px 2px 5px grey;
   }
   .flex-card button:hover::after{
     content:" →";
@@ -282,7 +280,7 @@ class glanceCard extends HTMLElement {
 }
 window.customElements.define('glance-card', glanceCard);
 
-// STANDARD BUTTON
+// STANDARD LINK BUTTON
 template.innerHTML = `
   <style>
     .btn-standard {
@@ -322,7 +320,7 @@ class standardBtn extends HTMLElement {
     this.shadowRoot.querySelector('button').setAttribute('style', `font-size:${fontPixel}px; background-color:${btnColor}; color:${txtColor};`);
   }
 }
-window.customElements.define('standard-btn', standardBtn);
+window.customElements.define('link-btn', standardBtn);
 
 // HIGHLIGHT LINK
 template.innerHTML = `
@@ -396,3 +394,200 @@ class underlineLink extends HTMLElement {
 }
 window.customElements.define('underline-link', underlineLink);
 
+// LOADING ANIMATION
+template.innerHTML = `
+  <style>
+    section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: 3;
+      top: 0px;
+      left: 0px;
+      -webkit-backdrop-filter: blur(50x);
+      backdrop-filter: blur(50px);
+    }
+    h1{
+      margin-right:15px;
+      margin-left:15px;
+      z-index: 4;
+    }
+    .load-ani {
+      z-index: 4;
+      width:45px;
+      height:45px;
+      animation: loadAni 1s infinite;
+    }
+    @keyframes loadAni{
+      0%{
+        transform: rotate(0deg);
+        border-radius:10px;
+      }
+      70%{
+        transform: rotate(180deg);
+        border-radius:30px;
+      }
+      100%{
+        transform: rotate(360deg);
+        border-radius:10px;
+      }
+    }
+  </style>
+  <section>
+    <div class="load-ani"></div>
+    <h1></h1>
+  </section>
+`;
+class loadAnimation extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.querySelector('h1').innerText = this.innerHTML;
+    const objectColor = this.getAttribute('objColor');
+    this.shadowRoot.querySelector('.load-ani').setAttribute('style', `background-color:${objectColor}`);
+    window.addEventListener("load", function() {
+      document.querySelector("load-animation").remove();
+    });
+  }
+}
+window.customElements.define('load-animation', loadAnimation);
+
+// SIDE NAVBAR
+template.innerHTML = `
+  <style>
+    .blurBack{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: 90;
+      top: 0px;
+      left: 0px;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      animation: blurAni 0.5s;
+    }
+    @keyframes blurAni{
+      0%{
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
+      }
+      100%{
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+    }
+
+    .sideNavBar{
+      border-radius:0px 20px 20px 0px;
+      margin-top:20px;
+      padding: 20px;
+      background-color:white;
+      box-shadow:1px 1px 10px lightgrey;
+      position:absolute;
+      display:grid;
+      template-columns-row: 1fr;
+      row-gap:10px;
+      width: 300px;
+      color: black;
+      cursor: pointer;
+      z-index:99;
+      animation: sideBarAni 1s;
+    }
+
+    @keyframes sideBarAni{
+      0%{
+        margin-left:-500px;
+      }
+      100%{
+        margin-left:0px;
+      }
+    }
+
+    button{
+      outline:none;
+      border: none;
+      margin: 10px;
+      background-color:lightgrey;
+      border-radius:10px;
+      opacity:70%;
+      padding: 1em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      border: none;
+      transition: 0.5s;
+      font-weight:bold;
+    }
+    button:hover{
+      cursor:pointer;
+      opacity:100%;
+    }
+    ::slotted(a) {
+      color: black;
+      z-index:99;
+      text-decoration:none;
+      padding: 5px;
+      font-size:20px;
+    }
+    ::slotted(a:hover) {
+      opacity: 50%;
+      box-shadow:0px 2px grey;
+    }
+  </style>
+  <div>
+    <button class="menu"></button>
+    <section style="display:none;">
+      <button class="close"></button>
+      <nav>
+        <slot></slot>
+      </nav>
+    </section>
+  </div>
+`;
+class sideNavbar extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+    // CONST
+    const btnForMenu = this.shadowRoot.querySelector('.menu');
+    const btnForClose = this.shadowRoot.querySelector('.close');
+
+    const blurringFx = this.shadowRoot.querySelector('div');
+    const navDisplay = this.shadowRoot.querySelector('nav');
+    const sectionTag = this.shadowRoot.querySelector('section');
+    
+    // BUTTON FEATURES
+    btnForMenu.innerText = this.getAttribute('btnStart');
+    btnForClose.innerText = this.getAttribute('btnEnd');
+
+    const fontPixel = this.getAttribute('btnSize') || this.getAttribute('size');
+    const btnColor = this.getAttribute('buttonColor') || this.getAttribute('btnColor');
+    const txtColor = this.getAttribute('textColor') || this.getAttribute('txtColor');
+    btnForMenu.setAttribute('style', `font-size:${fontPixel}px; background-color:${btnColor}; color:${txtColor};`);
+    btnForClose.setAttribute('style', `font-size:${fontPixel}px; background-color:${btnColor}; color:${txtColor};`);
+    // const link = this.getAttribute('position');
+    // this.shadowRoot.querySelector('a').setAttribute('href', `${link}`);    
+    btnForMenu.addEventListener("click",
+      function () {
+        blurringFx.setAttribute('class', 'blurBack');
+        sectionTag.setAttribute('style', 'display:block;');
+        navDisplay.setAttribute('class', 'sideNavBar');
+        btnForMenu.setAttribute('style', 'display:none;');
+      }
+    )
+    btnForClose.addEventListener("click", function () {
+        blurringFx.removeAttribute('class', 'blurBack');
+        sectionTag.setAttribute('style', 'display:none;');
+        navDisplay.removeAttribute('class', 'sideNavBar');
+        btnForMenu.removeAttribute('style', 'display:block;');
+      }
+    )
+  }
+}
+window.customElements.define('side-navbar', sideNavbar);

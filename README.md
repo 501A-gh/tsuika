@@ -1,15 +1,14 @@
-# Trim v1.6
+# Trim v1.7
 
 A design library thats lets you add advanced looking components.
 Trim Design Tools aims to provide people advanced looking components with a simple touch.
 
 Using only Trim can be fairly limiting, so it is advised to modify the CSS so that it can suit your needs more personally.
 
-## v1.6 New Features:
-- Button Web Component
-- Link Web Component
-- Responsive Design for flex-card
-- Content Card class adjusted
+## Latest Release Changes / Features:
+- Renamed Button Web Component
+- Side-navbar Web Component
+- Loading Screen Web Component
 
 
 ![Trim-Logo](trimBanner.png)
@@ -78,6 +77,7 @@ Trim Components:
 - [📊 Graphs](#grphs)
 - [🔛 ＋ 🎴 Flex Cards](#fcs)
 - [👀 Glance Cars](#glc)
+- [👆 Navigation Bar](#nvbr)
 
 
 <a name="cc"></a>
@@ -155,6 +155,7 @@ The `load-effectname` class will be enabled when the webpage has loaded. This co
 
 _`wave` and `open` best work with the `<details>` and `<summary>` HTML tags._
 
+v1.7 now supports the `load-animation` web component. You can change the color of the animating object using the `objColor` property.
 
 ## Trim Web Components
 
@@ -162,7 +163,7 @@ _`wave` and `open` best work with the `<details>` and `<summary>` HTML tags._
 
 ### 🔘 Buttons / Links:
 
-Trim comes with two types of links and a button. They can be added through using the `<highlight-link>` and `<underline-link>` components. The button can be called using the `<standard-btn>` component.
+Trim comes with two types of links and a button. They can be added through using the `<highlight-link>` and `<underline-link>` components. The button can be called using the `<link-btn>` component.
 
 <a name="gc"></a>
 
@@ -191,3 +192,9 @@ Flex cards utilize the flex box property and enables you to add a horizontally f
 
 Glance is initiated using the `<glance-card>` element. A title can be added using the `header` attribute.
 _Best works with CSS Grid._
+
+<a name="nvbr"></a>
+
+### 👆 Navigation Bar:
+
+Using the `<side-navbar>` component enables you to add an aesthtically pleasing navigation bar that can expan and retract using the pre-built buttons (renamable using the `btnStart` and `btnEnd` properties).
