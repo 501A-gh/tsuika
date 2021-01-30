@@ -158,6 +158,7 @@ template.innerHTML = `
       padding:15px;
       border-radius:15px;
       max-height: 180px;
+      overflow:hidden;
       -webkit-backdrop-fil55ter: blur(35px);
       backdrop-filter: blur(35px);
       background-image: linear-gradient(
@@ -168,31 +169,68 @@ template.innerHTML = `
       );
       transition:0.5s;
     }
-    .active-glance:active {
+    .active-glance:hover{
+      cursor:pointer;
+      transform: scale3d(0.95, 0.95, 0.95);
+    }
+    .popUp {
       user-select: none;
       margin: none;
-      width: 50%;
       height: auto;
       max-height: none;
-      border-radius: calc(5px * 3);
+      border-radius: 20px;
       box-shadow: 5px 5px 10px grey;
       z-index: 2;
       position: fixed;
       background-image:none;
       top: calc(25% - 25px);
-      right: calc(25% - 25px);
-      transform: scale3d(1.1 1.1 1.1);
+      padding:15px;
+      -webkit-backdrop-filter: blur(35px);
+      backdrop-filter: blur(35px);
+      transform: scale3d(1, 1, 1);
+      transition:1s;
+      animation: popUpAni 1s;
+    }
+    @keyframes popUpAni{
+      0%{
+        transform: scale3d(0.3, 0.3, 0.3);
+        box-shadow: 5px 5px 10px light;
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+        top:50px;
+      }
+      35%{
+        transform: scale3d(1.2, 1.2, 1.2);
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      .popUp{
+        width: 80%;
+        right: calc(13% - 25px);
+      }
+    }
+    @media only screen and (min-width: 401px) and (max-width: 600px) {
+      .popUp{
+        width: 75%;
+        right: calc(15% - 25px);
+      }
+    }
+    @media only screen and (min-width: 601px) {
+      .popUp{
+        width: 50%;
+        right: calc(25% - 25px);
+      }
     }
     .active-glance::before {
-      content: "Long Press To View";
+      content: "Click To View";
       font-size: 0.8em;
       opacity: 60%;
       font-weight: bold;
     }
   </style>
-  <section class="active-glance">
+  <section class="active-glance text">
     <h1></h1>
-    <p></p>
+    <slot></slot>
   </section>
 `;
 class glanceCard extends HTMLElement {
@@ -205,7 +243,11 @@ class glanceCard extends HTMLElement {
     if (this.getAttribute('header') === null) {
       this.shadowRoot.querySelector('h1').remove();
     }
-    this.shadowRoot.querySelector('p').innerText = this.innerHTML;
+
+    const glance = this.shadowRoot.querySelector("section")
+    glance.addEventListener("click", function () {
+      glance.setAttribute('class', 'popUp');
+    })
   }
 }
 window.customElements.define('glance-card', glanceCard);
@@ -454,6 +496,10 @@ template.innerHTML = `
     button:hover{
       cursor:pointer;
       opacity:100%;
+    }
+    .menu{
+      margin-bottom:10px;
+      margin-top:10px;
     }
     .close{
       margin:10px;
