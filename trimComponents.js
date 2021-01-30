@@ -5,46 +5,16 @@ template.innerHTML = `
   <style>
     .glass-card{
       border-radius:20px;
-      padding:20px 15px 20px 15px;
+      padding: 15px;
       -webkit-backdrop-filter: blur(35px);
       backdrop-filter: blur(35px);
       z-index:3;
       box-shadow:1px 1px 10px lightgrey;
     }
-    .glass-card p{
-      paddin:0px;
-      margin:0px;
-    }
-    .glass-card button{
-      outline:none;
-      border: none;
-      margin: 20px 0px -10px 0px;
-      background-color:lightgrey;
-      border-radius:10px;
-      opacity:70%;
-
-      padding: 1em;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      border: none;
-      transition: 0.5s;
-      font-weight:bold;
-    }
-    .glass-card button:hover{
-      cursor:pointer;
-      opacity:100%;
-    }
-    .glass-card button:hover::after{
-      content:" →";
-    }
   </style>
-  <script>
-    this.getAttribute('btnHref') = btnURL;
-  </script>
   <section class="glass-card">
      <h1></h1>
-     <p></p>
-     <button></button>
+     <slot></slot>
   </section>
 `;
 class glassCard extends HTMLElement {
@@ -53,17 +23,9 @@ class glassCard extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header');
-    this.shadowRoot.querySelector('p').innerText = this.innerHTML;
-    this.shadowRoot.querySelector('button').innerText = this.getAttribute('btn');
-    const link = this.getAttribute('btnHref');
-    this.shadowRoot.querySelector('button').addEventListener('click', function(){
-      window.location.href=`${link}`;
-    });
+
     if (this.getAttribute('header') === null) {
       this.shadowRoot.querySelector('h1').remove();
-    }
-    if (this.getAttribute('btn') === null) {
-      this.shadowRoot.querySelector('button').remove();
     }
   }
 }
@@ -73,8 +35,8 @@ window.customElements.define('glass-card', glassCard);
 template.innerHTML = `
   <style>
   .flex-card{
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 20px;
+    padding: 15px;
     height: 200px;
     box-shadow: -5px 0 10px white, 1px 1px 10px lightgrey;
     transition: 0.5s;
@@ -84,21 +46,6 @@ template.innerHTML = `
     overflow: hidden;
     transition: 0.5s;
   }
-  .flex-card button{
-    outline:none;
-    border: none;
-    margin: 20px 0px -10px 0px;
-    background-color:lightgrey;
-    border-radius:10px;
-    opacity:70%;
-
-    padding: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    border: none;
-    transition: 0.5s;
-    font-weight: bold;
-  }
   .flex-card:hover{
     overflow: auto;
     cursor: pointer;
@@ -107,13 +54,6 @@ template.innerHTML = `
   }
   .flex-cards:last-child {
     margin-right: 10px;
-  }
-  .flex-card button:hover{
-    cursor:pointer;
-    opacity:100%;
-  }
-  .flex-card button:hover::after{
-    content:" →";
   }
   @media only screen and (max-width: 400px) {
     .flex-card:hover{
@@ -143,8 +83,7 @@ template.innerHTML = `
   </style>
   <section class="flex-card">
     <h1></h1>
-    <p></p>
-    <button></button>
+    <slot></slot>
   </section>
 `;
 class flexCard extends HTMLElement {
@@ -153,15 +92,6 @@ class flexCard extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header');
-    this.shadowRoot.querySelector('p').innerText = this.innerHTML;
-    this.shadowRoot.querySelector('button').innerText = this.getAttribute('btn');
-    const link = this.getAttribute('btnHref');
-    this.shadowRoot.querySelector('button').addEventListener('click', function(){
-      window.location.href=`${link}`;
-    });
-    if (this.getAttribute('btn') === null) {
-      this.shadowRoot.querySelector('button').remove();
-    }
   }
 }
 window.customElements.define('flex-card', flexCard);
@@ -467,8 +397,8 @@ template.innerHTML = `
       z-index: 90;
       top: 0px;
       left: 0px;
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
       animation: blurAni 0.5s;
     }
     @keyframes blurAni{
@@ -477,14 +407,14 @@ template.innerHTML = `
         backdrop-filter: blur(0px);
       }
       100%{
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
       }
     }
 
     .sideNavBar{
       border-radius:0px 20px 20px 0px;
-      margin-top:20px;
+      margin-top:70px;
       padding: 20px;
       background-color:white;
       box-shadow:1px 1px 10px lightgrey;
@@ -511,7 +441,6 @@ template.innerHTML = `
     button{
       outline:none;
       border: none;
-      margin: 10px;
       background-color:lightgrey;
       border-radius:10px;
       opacity:70%;
@@ -526,6 +455,11 @@ template.innerHTML = `
       cursor:pointer;
       opacity:100%;
     }
+    .close{
+      margin:10px;
+      float:right;
+    }
+
     ::slotted(a) {
       color: black;
       z-index:99;
