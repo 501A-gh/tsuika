@@ -161,13 +161,9 @@
   .grid-1fr-1fr-1fr-1fr-1fr-1fr {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
-  /* .flex-cards {
-    overflow-y: auto;
-  } */
 }
 
 /* 🎴 Cards */
-.contentCard,
 .contentCards section,
 .contentCards div {
   padding: var(--responsivePadding);

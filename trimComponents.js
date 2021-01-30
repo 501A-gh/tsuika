@@ -1,5 +1,32 @@
 const template = document.createElement('template');
 
+// CONTENT CARD
+template.innerHTML = `
+  <style>
+    section{
+      border-radius:20px;
+      padding: 15px;
+      box-shadow:1px 1px 10px lightgrey;
+    }
+  </style>
+  <section class="glass-card">
+     <h1></h1>
+     <slot></slot>
+  </section>
+`;
+class contentCard extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header');
+    if (this.getAttribute('header') === null) {
+      this.shadowRoot.querySelector('h1').remove();
+    }
+  }
+}
+window.customElements.define('content-card', contentCard);
+
 // GLASS CARD
 template.innerHTML = `
   <style>
@@ -167,14 +194,21 @@ template.innerHTML = `
         85%,
         lightgrey
       );
-      transition:0.5s;
+      animation:combackAni 1s;
     }
-    .active-glance:hover{
-      cursor:pointer;
-      transform: scale3d(0.95, 0.95, 0.95);
+    @keyframes combackAni{
+      0%{
+        box-shadow: 5px 5px 10px light;
+        backdrop-filter: blur(0px);
+        border-radius: 5px;
+        top:50px;
+        transform: scale3d(0.5, 0.5, 0.5);
+      }
+      35%{
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
     }
     .popUp {
-      user-select: none;
       margin: none;
       height: auto;
       max-height: none;
@@ -193,9 +227,9 @@ template.innerHTML = `
     }
     @keyframes popUpAni{
       0%{
-        transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.1, 0.1, 0.1);
         box-shadow: 5px 5px 10px light;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(0px);
         border-radius: 5px;
         top:50px;
       }
@@ -221,15 +255,39 @@ template.innerHTML = `
         right: calc(25% - 25px);
       }
     }
-    .active-glance::before {
-      content: "Click To View";
-      font-size: 0.8em;
-      opacity: 60%;
-      font-weight: bold;
+    button{
+      outline:none;
+      border: none;
+      background-color:lightgrey;
+      border-radius:10px;
+      opacity:70%;
+      padding: 1em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      border: none;
+      transition: 0.5s;
+      font-weight:bold;
+      float:right;
+      z-index:3;
+    }
+    button:hover{
+      cursor:pointer;
+      opacity:100%;
+    }
+    .openBtn{
+      display:block;
+    }
+    .closeBtn{
+      display:none;
+    }
+    h1:hover{
+      cursor:pointer;
     }
   </style>
-  <section class="active-glance text">
-    <h1></h1>
+  <section class="active-glance">
+    <button class="openBtn"></button>
+    <button class="closeBtn"></button>
+    <h1 class="head"></h1>
     <slot></slot>
   </section>
 `;
@@ -239,14 +297,37 @@ class glanceCard extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header');
+    const cardTitle = this.shadowRoot.querySelector("h1");
+
+    cardTitle.innerText = this.getAttribute('header');
     if (this.getAttribute('header') === null) {
-      this.shadowRoot.querySelector('h1').remove();
+      cardTitle.remove();
     }
 
-    const glance = this.shadowRoot.querySelector("section")
-    glance.addEventListener("click", function () {
+    const glance = this.shadowRoot.querySelector("section");
+    const openBtn = this.shadowRoot.querySelector(".openBtn");
+    const closeBtn = this.shadowRoot.querySelector(".closeBtn");
+
+    openBtn.innerText = this.getAttribute('btnStart');
+    closeBtn.innerText = this.getAttribute('btnEnd');
+
+    const fontPixel = this.getAttribute('btnSize') || this.getAttribute('size');
+    const btnColor = this.getAttribute('buttonColor') || this.getAttribute('btnColor');
+    const txtColor = this.getAttribute('textColor') || this.getAttribute('txtColor');
+    closeBtn.setAttribute('style', `font-size:${fontPixel}px; background-color:${btnColor}; color:${txtColor};`);
+    openBtn.setAttribute('style', `font-size:${fontPixel}px; background-color:${btnColor}; color:${txtColor};`);
+
+    openBtn.addEventListener("click", function () {
+      glance.removeAttribute('class', 'active-glance');
       glance.setAttribute('class', 'popUp');
+      closeBtn.setAttribute('style', 'display:block;');
+      openBtn.setAttribute('style', 'display:none;');
+    })
+    closeBtn.addEventListener("click", function () {
+      glance.removeAttribute('class', 'popUp');
+      glance.setAttribute('class', 'active-glance');
+      closeBtn.setAttribute('style', 'display:none;');
+      openBtn.setAttribute('style', 'display:block;');
     })
   }
 }
@@ -553,21 +634,18 @@ class sideNavbar extends HTMLElement {
     btnForClose.setAttribute('style', `font-size:${fontPixel}px; background-color:${btnColor}; color:${txtColor};`);
     // const link = this.getAttribute('position');
     // this.shadowRoot.querySelector('a').setAttribute('href', `${link}`);    
-    btnForMenu.addEventListener("click",
-      function () {
-        blurringFx.setAttribute('class', 'blurBack');
-        sectionTag.setAttribute('style', 'display:block;');
-        navDisplay.setAttribute('class', 'sideNavBar');
-        btnForMenu.setAttribute('style', 'display:none;');
-      }
-    )
+    btnForMenu.addEventListener("click", function () {
+      blurringFx.setAttribute('class', 'blurBack');
+      sectionTag.setAttribute('style', 'display:block;');
+      navDisplay.setAttribute('class', 'sideNavBar');
+      btnForMenu.setAttribute('style', 'display:none;');
+    })
     btnForClose.addEventListener("click", function () {
-        blurringFx.removeAttribute('class', 'blurBack');
-        sectionTag.setAttribute('style', 'display:none;');
-        navDisplay.removeAttribute('class', 'sideNavBar');
-        btnForMenu.removeAttribute('style', 'display:block;');
-      }
-    )
+      blurringFx.removeAttribute('class', 'blurBack');
+      sectionTag.setAttribute('style', 'display:none;');
+      navDisplay.removeAttribute('class', 'sideNavBar');
+      btnForMenu.removeAttribute('style', 'display:block;');
+    })
   }
 }
 window.customElements.define('side-navbar', sideNavbar);
