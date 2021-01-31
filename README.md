@@ -1,11 +1,11 @@
-# Trim v1.7
+# Trim Beta v1.7
 
-A design library thats lets you add advanced looking components.
-Trim Design Tools aims to provide people advanced looking components with a simple touch.
+This design library is still at its beta stage development.
 
-Using only Trim can be fairly limiting, so it is advised to modify the CSS so that it can suit your needs more personally.
+Trim design tools is a design library thats lets you add advanced looking components, with a simple touch.
 
-## Latest Release Changes / Features:
+
+## Beta Release Changes / Features:
 - Renamed Button Web Component
 - Side-navbar Web Component
 - Loading Screen Web Component
@@ -31,7 +31,7 @@ Anybody can get started with Trim by inserting the following above the `</head>`
 />
 ```
 
-Since v1.5, Trim has supported webcomponents. Access them by inserting the CDN above the `</head>` tag.
+Since beta v1.5, Trim has supported webcomponents. Access them by inserting the CDN above the `</head>` tag.
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/trimComponents.js" defer></script>
@@ -55,7 +55,6 @@ Click [here](https://github.com/501A-Designs/Palette#readme) to learn more about
 
 Pre-Styled Classes
 
-- [🎴 Content Cards](#cc)
 - [📃 Styled Ordered List](#sol)
 
 Formatting / Position:
@@ -72,6 +71,7 @@ Using Pseudo Elements:
 ## ⚠ Web Components Naming
 
 Trim Components:
+- [🎴 Content Cards](#cc)
 - [🔘 Buttons / Links](#btn\lnks)
 - [💳 Glass Card](#gc)
 - [📊 Graphs](#grphs)
@@ -80,11 +80,6 @@ Trim Components:
 - [👆 Navigation Bar](#nvbr)
 
 
-<a name="cc"></a>
-
-### 🎴 Content Cards:
-
-Content cards are `section` tags with the class of `contentCard` that enable you to show your information in a pre-styled card format.
 
 <a name="sol"></a>
 
@@ -158,6 +153,12 @@ _`wave` and `open` best work with the `<details>` and `<summary>` HTML tags._
 v1.7 now supports the `load-animation` web component. You can change the color of the animating object using the `objColor` property.
 
 ## Trim Web Components
+
+<a name="cc"></a>
+
+### 🎴 Content Cards:
+
+Using the `<content-card>` component enables you to show your information in a pre-styled card format.
 
 <a name="btn/lnks"></a>
 

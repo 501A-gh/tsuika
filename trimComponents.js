@@ -140,7 +140,7 @@ template.innerHTML = `
       border-radius: 5px;
       height: 20px;
       position: relative;
-      animation: bargraphAni 1s ease-in;
+      animation: bargraphAni 0.5s;
     }
     @keyframes bargraphAni {
       0% {

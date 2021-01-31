@@ -206,14 +206,32 @@
 
 /* HOVER */
 .hover-rotation:hover {
-  transform: rotateX(40deg) rotateY(-0.5deg) rotateZ(-1.5deg);
   box-shadow: 10px 30px 20px grey;
   cursor: pointer;
+  animation: hoverAni var(--transitionSpeed);
+  transform: rotateX(40deg) rotateY(-0.5deg) rotateZ(-1.5deg);
+}
+@keyframes hoverAni{
+  0%{
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  35%{
+    transform: rotateX(50deg) rotateY(-0.4deg) rotateZ(-1deg);
+  }
 }
 .hover-scale:hover {
   transform: var(--standardScale);
   box-shadow: var(--standardBoxShadow);
   cursor: pointer;
+  animation: hoverScale var(--transitionSpeed);
+}
+@keyframes hoverScale{
+  0%{
+    transform: none;
+  }
+  35%{
+    transform: scale3d(1.15,1.15,1.15);
+  }
 }
 .hover-opacity:hover {
   opacity: 60%;
