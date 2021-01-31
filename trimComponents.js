@@ -210,14 +210,12 @@ template.innerHTML = `
     }
     .popUp {
       margin: none;
-      height: auto;
-      max-height: none;
       border-radius: 20px;
       box-shadow: 5px 5px 10px grey;
       z-index: 2;
       position: fixed;
       background-image:none;
-      top: calc(25% - 25px);
+      overflow-y: auto;
       padding:15px;
       -webkit-backdrop-filter: blur(35px);
       backdrop-filter: blur(35px);
@@ -240,19 +238,25 @@ template.innerHTML = `
     @media only screen and (max-width: 400px) {
       .popUp{
         width: 80%;
+        top: calc(10% - 25px);
         right: calc(13% - 25px);
+        bottom: calc(10% - 25px);
       }
     }
     @media only screen and (min-width: 401px) and (max-width: 600px) {
       .popUp{
         width: 75%;
+        top: calc(15% - 25px);
         right: calc(15% - 25px);
+        bottom: calc(15% - 25px);
       }
     }
     @media only screen and (min-width: 601px) {
       .popUp{
         width: 50%;
+        top: calc(25% - 25px);
         right: calc(25% - 25px);
+        max-height: 800px;
       }
     }
     button{
@@ -454,14 +458,13 @@ template.innerHTML = `
       display: flex;
       justify-content: center;
       align-items: center;
-      
       width: 100%;
       height: 100%;
       position: fixed;
       z-index: 3;
       top: 0px;
       left: 0px;
-      -webkit-backdrop-filter: blur(50x);
+      -webkit-backdrop-filter: blur(50px);
       backdrop-filter: blur(50px);
     }
     h1{
@@ -536,8 +539,9 @@ template.innerHTML = `
     }
 
     .sideNavBar{
-      border-radius:0px 20px 20px 0px;
+      border-radius: 20px;
       margin-top:70px;
+      margin-left:10px;
       padding: 20px;
       background-color:white;
       box-shadow:1px 1px 10px lightgrey;
@@ -556,8 +560,11 @@ template.innerHTML = `
       0%{
         margin-left:-500px;
       }
-      100%{
-        margin-left:0px;
+      30%{
+        margin-left:30px;
+      }
+      55%{
+        margin-left:-10px;
       }
     }
 
