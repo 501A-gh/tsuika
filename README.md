@@ -1,4 +1,4 @@
-# Trim Beta v1.7
+# Trim v0 Beta v1.8
 
 This design library is still at its beta stage development.
 
@@ -6,12 +6,13 @@ Trim design tools is a design library thats lets you add advanced looking compon
 
 
 ## Beta Release Changes / Features:
-- Renamed Button Web Component
-- Side-navbar Web Component
-- Loading Screen Web Component
+- Seperating web-components into seperate files 
+- Trim Website Released
+- flex-card --> flex-cards rename
+- Global style properties in cssVariables.css file
 
 
-![Trim-Logo](trimBanner.png)
+![Trim-Logo](img/trimBanner.png)
 
 ## 💡 Contents
 
@@ -26,15 +27,24 @@ Anybody can get started with Trim by inserting the following above the `</head>`
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/trim.css"
+  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/css/trim.css"
   rel="stylesheet"
 />
 ```
 
-Since beta v1.5, Trim has supported webcomponents. Access them by inserting the CDN above the `</head>` tag.
+Each webcomponent is saved in seperate files. To access a webcomponent, using the CDN below while referencing the JavaScript file name at the same time.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/trimComponents.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/components/<component-file-name>" defer></script>
+```
+
+In addition to using the webcomponents it is necessary to use the CDN below. Because all components use CSS variables this gives the general styling to all the components. You may edit it to your preference as well.
+
+```html
+<link
+  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/css/cssVariables.css"
+  rel="stylesheet"
+/>
 ```
 
 Optional:

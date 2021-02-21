@@ -4,6 +4,8 @@
   --standardMargin: 5px;
   --standardPadding: 5px;
   --standardBorderRadius: 15px;
+  --borderRadius: 20px;
+  --blur: blur(35px);
   --transitionSpeed: 0.5s;
   --standardGridGap: 5px;
   --boxShadow: 1px 1px 10px lightgrey;
@@ -210,6 +212,7 @@
   cursor: pointer;
   animation: hoverAni var(--transitionSpeed);
   transform: rotateX(40deg) rotateY(-0.5deg) rotateZ(-1.5deg);
+  transform-style: preserve-3d;
 }
 @keyframes hoverAni{
   0%{

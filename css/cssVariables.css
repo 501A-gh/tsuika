@@ -1,0 +1,22 @@
+:root {
+    /* BUTTON STYLE */
+    --btnSidePadding: 1em;
+    --btnTopPadding: 0.5em;
+
+    /* GLOBAL ATTRIBUTES */
+    --margin: 5px;
+    --padding: 15px;
+    --borderRadius: 15px;
+    --blur: blur(35px);
+    --transitionSpeed: 0.5s;
+
+    /* GRID */
+    --gridGap: 5px;
+
+    /* BOX SHADOW */
+    --boxShadow: 1px 1px 10px lightgrey;
+    --heavyBoxShadow: 8px 8px 25px grey;
+
+    /* SCALE */
+    --scale: scale3d(1.05, 1.05, 1.05);
+  }
