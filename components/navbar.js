@@ -1,7 +1,5 @@
-const template = document.createElement('template');
-
 // SIDE NAVBAR
-template.innerHTML = `
+document.createElement('template').innerHTML = `
   <style>
     .blurBack{
       width: 100%;

@@ -1,7 +1,5 @@
-const template = document.createElement('template');
-
 // GLASS CARD
-template.innerHTML = `
+document.createElement('template').innerHTML = `
   <style>
     .glass-card{
       border-radius: var(--borderRadius);

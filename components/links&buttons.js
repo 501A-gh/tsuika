@@ -1,7 +1,5 @@
-const template = document.createElement('template');
-
 // STANDARD LINK BUTTON
-template.innerHTML = `
+document.createElement('template').innerHTML = `
   <style>
     .btn-standard {
       padding: 1em;

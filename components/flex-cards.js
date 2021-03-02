@@ -1,7 +1,5 @@
-const template = document.createElement('template');
-
 // FLEX CARD CONTAINER
-template.innerHTML = `
+document.createElement('template').innerHTML = `
   <style>
   .flexCards{
     display: flex;

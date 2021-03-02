@@ -1,7 +1,5 @@
-const template = document.createElement('template');
-
 // GRAPH
-template.innerHTML = `
+document.createElement('template').innerHTML = `
   <style>
     h1{
       margin-bottom:10px;

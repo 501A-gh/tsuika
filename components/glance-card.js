@@ -1,7 +1,5 @@
-const template = document.createElement('template');
-
 // GLANCE CARD
-template.innerHTML = `
+document.createElement('template').innerHTML = `
   <style>
     .active-glance {
       height: 100%;

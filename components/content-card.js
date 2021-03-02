@@ -1,7 +1,5 @@
-const template = document.createElement('template');
-
 // CONTENT CARD
-template.innerHTML = `
+document.createElement('template').innerHTML = `
   <style>
     section{
       border-radius: var(borderRadius);

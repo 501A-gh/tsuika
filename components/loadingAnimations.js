@@ -1,7 +1,5 @@
-const template = document.createElement('template');
-
 // LOADING ANIMATION
-template.innerHTML = `
+document.createElement('template').innerHTML = `
   <style>
     section{
       display: flex;
