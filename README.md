@@ -1,6 +1,10 @@
-# Trim v0 Beta v1.9
+# Trim Design Tools : Beta
 
-This design library is still at its beta stage development.
+Note : This design library is still at its beta stage development.
+
+[![GitHub release](https://img.shields.io/github/v/release/501a-designs/trim-design-tools.svg)](https://GitHub.com/501a-designs/trim-design-tools/releases/)
+
+[![GitHub commits](https://img.shields.io/github/commits-since/501a-designs/trim-design-tools/v0.1.9.svg)](https://GitHub.com/501a-designs/trim-design-tools/commit/)
 
 Trim design tools is a design library thats lets you add advanced looking components, with a simple touch.
 
