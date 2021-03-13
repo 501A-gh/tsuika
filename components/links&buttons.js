@@ -1,5 +1,6 @@
 // STANDARD LINK BUTTON
-document.createElement('template').innerHTML = `
+const standardBtnTemplate = document.createElement('template');
+standardBtnTemplate.innerHTML = `
   <style>
     .btn-standard {
       padding: 1em;
@@ -25,7 +26,7 @@ class standardBtn extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(standardBtnTemplate.content.cloneNode(true));
     this.shadowRoot.querySelector('button').innerText = this.innerHTML;
     const link = this.getAttribute('btnHref');
     const fontPixel = this.getAttribute('btnSize') || this.getAttribute('size');
@@ -41,7 +42,7 @@ class standardBtn extends HTMLElement {
 window.customElements.define('link-btn', standardBtn);
 
 // HIGHLIGHT LINK
-template.innerHTML = `
+standardBtnTemplate.innerHTML = `
   <style>
     .highlight-link {
       text-decoration: none;
@@ -68,7 +69,7 @@ class highlightLink extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(standardBtnTemplate.content.cloneNode(true));
     this.shadowRoot.querySelector('a').innerText = this.innerHTML;
     const link = this.getAttribute('linkHref');
     this.shadowRoot.querySelector('a').setAttribute('href', `${link}`);
@@ -77,7 +78,7 @@ class highlightLink extends HTMLElement {
 window.customElements.define('highlight-link', highlightLink);
 
 // UNDERLINED LINK
-template.innerHTML = `
+standardBtnTemplate.innerHTML = `
   <style>
     .underline-link {
       cursor: pointer;
@@ -104,7 +105,7 @@ class underlineLink extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(standardBtnTemplate.content.cloneNode(true));
     this.shadowRoot.querySelector('a').innerText = this.innerHTML;
     const link = this.getAttribute('linkHref');
     this.shadowRoot.querySelector('a').setAttribute('href', `${link}`);

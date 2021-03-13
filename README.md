@@ -1,27 +1,24 @@
-# Trim v0 Beta v1.8
+# Trim v0 Beta v1.9
 
 This design library is still at its beta stage development.
 
 Trim design tools is a design library thats lets you add advanced looking components, with a simple touch.
 
-
 ## Beta Release Changes / Features:
-- Seperating web-components into seperate files 
-- Trim Website Released
-- flex-card --> flex-cards rename
-- Global style properties in cssVariables.css file
-
+- NPM support
+- New img-blur component added
 
 ![Trim-Logo](img/trimBanner.png)
 
 ## 💡 Contents
 
-1. [Getting Started](#gs)
+1. [Getting started with a CDN](#cdn)
+2. [NPM Installation](#npm)
 2. [Documentation](#acn)
 
-<a name="gs"></a>
+<a name="cdn"></a>
 
-## 👉 Getting Started
+## 👉 CDN
 
 Anybody can get started with Trim by inserting the following above the `</head>` tag.
 
@@ -59,35 +56,42 @@ You can also insert the Palette CDN which will enable you to easily add color vi
 
 Click [here](https://github.com/501A-Designs/Palette#readme) to learn more about Palette.
 
+<a name="npm"></a>
+
+## 📦 NPM Installation
+
+`npm i trim-design-tools --save`
+
 <a name="acn"></a>
 
 ## ⚠ About Class Naming
 
 Pre-Styled Classes
 
-- [📃 Styled Ordered List](#sol)
+- [Styled Ordered List](#sol)
 
 Formatting / Position:
 
-- [🔳 Simple Grid](#sg)
-- [🔛 Simple Flex Box](#sfb)
+- [Simple Grid](#sg)
+- [Simple Flex Box](#sfb)
 
 Using Pseudo Elements:
 
-- [☝ Hover](#hvr)
-- [🔃 Load](#load)
+- [Hover](#hvr)
+- [Load](#load)
 
 
 ## ⚠ Web Components Naming
 
 Trim Components:
-- [🎴 Content Cards](#cc)
-- [🔘 Buttons / Links](#btn\lnks)
-- [💳 Glass Card](#gc)
-- [📊 Graphs](#grphs)
-- [🔛 ＋ 🎴 Flex Cards](#fcs)
-- [👀 Glance Cars](#glc)
-- [👆 Navigation Bar](#nvbr)
+- [Content Cards](#cc)
+- [Buttons / Links](#btn\lnks)
+- [Glass Card](#gc)
+- [Graphs](#grphs)
+- [Flex Cards](#fcs)
+- [Glance Cars](#glc)
+- [Navigation Bar](#nvbr)
+- [Image Blur](#imgblr)
 
 
 
@@ -209,3 +213,9 @@ _Best works with CSS Grid._
 ### 👆 Navigation Bar:
 
 Using the `<side-navbar>` component enables you to add an aesthtically pleasing navigation bar that can expan and retract using the pre-built buttons (renamable using the `btnStart` and `btnEnd` properties).
+
+<a name="imgblr"></a>
+
+### Image Blur:
+
+Using the `<img-blur>` component enables you to display images with a blurred shadow that corresponds with the color of the image (resizeable using the `width`, `height` and `top` properties. Add an image using the `imgUrl` or `url` property).

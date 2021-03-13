@@ -1,5 +1,6 @@
 // FLEX CARD CONTAINER
-document.createElement('template').innerHTML = `
+const flexCardsTemplate = document.createElement('template');
+  flexCardsTemplate.innerHTML = `
   <style>
   .flexCards{
     display: flex;
@@ -82,7 +83,7 @@ class flexCardContainer extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(flexCardsTemplate.content.cloneNode(true));
   }
 }
 window.customElements.define('flex-cards', flexCardContainer);

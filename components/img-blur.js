@@ -3,12 +3,12 @@ const imgBlurTemplate = document.createElement('template');
 imgBlurTemplate.innerHTML = `
   <style>
     .blur {
-        position: absolute;
-        filter: blur(16px) opacity(.6);
-        transform: scale(.92,.96);
-        z-index: -1;
-        background-size: cover;
-        border-radius: 0.75em;
+      position: absolute;
+      filter: blur(16px) opacity(.6);
+      transform: scale(.92,.96);
+      z-index: -1;
+      background-size: cover;
+      border-radius: var(borderRadius);
     }
     @keyframes blur{
       0%{
@@ -17,7 +17,7 @@ imgBlurTemplate.innerHTML = `
       }
     }
     img{
-        border-radius:15px;
+      border-radius: var(borderRadius);
     }
     </style>
     <section>

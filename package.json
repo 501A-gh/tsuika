@@ -1,0 +1,22 @@
+{
+  "name": "trim-design-tools",
+  "version": "0.1.9",
+  "description": "Add advanced looking components with a simple touch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/501A-Designs/Trim.git"
+  },
+  "keywords": [
+    "webcomponents"
+  ],
+  "author": "501A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/501A-Designs/Trim/issues"
+  },
+  "homepage": "https://github.com/501A-Designs/Trim#readme"
+}

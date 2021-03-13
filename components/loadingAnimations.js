@@ -1,5 +1,6 @@
 // LOADING ANIMATION
-document.createElement('template').innerHTML = `
+const loadAnimationTemplate = document.createElement('template')
+  loadAnimationTemplate.innerHTML = `
   <style>
     section{
       display: flex;
@@ -77,7 +78,7 @@ class loadAnimation extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(loadAnimationTemplate.content.cloneNode(true));
     this.shadowRoot.querySelector('h1').innerText = this.innerHTML;
     const objectColor = this.getAttribute('objColor');
     const aniType = this.getAttribute('aniType');

@@ -1,5 +1,6 @@
 // SIDE NAVBAR
-document.createElement('template').innerHTML = `
+const sideNavbarTemplate = document.createElement('template');
+sideNavbarTemplate.innerHTML = `
   <style>
     .blurBack{
       width: 100%;
@@ -105,7 +106,7 @@ class sideNavbar extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(sideNavbarTemplate.content.cloneNode(true));
 
     // CONST
     const btnForMenu = this.shadowRoot.querySelector('.menu');

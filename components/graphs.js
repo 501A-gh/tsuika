@@ -1,5 +1,6 @@
 // GRAPH
-document.createElement('template').innerHTML = `
+const barGraphTemplate = document.createElement('template');
+barGraphTemplate.innerHTML = `
   <style>
     h1{
       margin-bottom:10px;
@@ -33,7 +34,7 @@ class barGraph extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(barGraphTemplate.content.cloneNode(true));
 
     this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header')+" :";
 

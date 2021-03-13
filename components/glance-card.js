@@ -1,5 +1,6 @@
 // GLANCE CARD
-document.createElement('template').innerHTML = `
+const glanceCardTemplate = document.createElement('template');
+glanceCardTemplate.innerHTML = `
   <style>
     .active-glance {
       height: 100%;
@@ -121,7 +122,7 @@ class glanceCard extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(glanceCardTemplate.content.cloneNode(true));
 
     const cardTitle = this.shadowRoot.querySelector("h1");
 
