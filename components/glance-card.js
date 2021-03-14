@@ -8,7 +8,7 @@ glanceCardTemplate.innerHTML = `
       border-radius:var(--borderRadius);
       max-height: 180px;
       overflow:hidden;
-      -webkit-backdrop-fil55ter: var(--blur);
+      -webkit-backdrop-filter: var(--blur);
       backdrop-filter: var(--blur);
       background-image: linear-gradient(
         to bottom,
@@ -20,10 +20,9 @@ glanceCardTemplate.innerHTML = `
     }
     @keyframes combackAni{
       0%{
-        box-shadow: 5px 5px 10px light;
-        border-radius: 5px;
+        box-shadow: var(--lightBoxShadow);
         top:50px;
-        transform: scale3d(0.5, 0.5, 0.5);
+        transform: var(--smallScale);
       }
       35%{
         transform: scale3d(1.05, 1.05, 1.05);
@@ -46,7 +45,7 @@ glanceCardTemplate.innerHTML = `
     @keyframes popUpAni{
       0%{
         transform: scale3d(0.1, 0.1, 0.1);
-        box-shadow: 5px 5px 10px light;
+        box-shadow: var(--boxShadow);
         backdrop-filter: blur(0px);
         border-radius: 5px;
         top:50px;
@@ -86,13 +85,12 @@ glanceCardTemplate.innerHTML = `
       outline:none;
       border: none;
       background-color:lightgrey;
-      border-radius:10px;
+      border-radius: var(--btnBorderRadius);
       opacity:70%;
-      padding: 1em;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      border: none;
-      transition: 0.5s;
+      padding: var(--btnSidePadding);
+      padding-top: var(--btnTopPadding);
+      padding-bottom: var(--btnTopPadding);
+      transition: var(--transitionSpeed);
       font-weight:bold;
       float:right;
       z-index:3;

@@ -3,7 +3,6 @@
 Note : This design library is still at its beta stage development.
 
 [![GitHub release](https://img.shields.io/github/v/release/501a-designs/trim-design-tools.svg)](https://GitHub.com/501a-designs/trim-design-tools/releases/)
-
 [![GitHub commits](https://img.shields.io/github/commits-since/501a-designs/trim-design-tools/v0.1.9.svg)](https://GitHub.com/501a-designs/trim-design-tools/commit/)
 
 Trim design tools is a design library thats lets you add advanced looking components, with a simple touch.
@@ -24,22 +23,29 @@ Trim design tools is a design library thats lets you add advanced looking compon
 
 ## 👉 CDN
 
+
+
 Anybody can get started with Trim by inserting the following above the `</head>` tag.
 
 ```html
+<script src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/index.js" defer></script>
+<link
+  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/css/cssVariables.css"
+  rel="stylesheet"
+/>
 <link
   href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/css/trim.css"
   rel="stylesheet"
 />
 ```
 
-Each webcomponent is saved in seperate files. To access a webcomponent, using the CDN below while referencing the JavaScript file name at the same time.
+Each webcomponent is saved in seperate files. To access a specific webcomponent, use the CDN below while referencing the JavaScript file name.
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/components/<component-file-name>" defer></script>
 ```
 
-In addition to using the webcomponents it is necessary to use the CDN below. Because all components use CSS variables this gives the general styling to all the components. You may edit it to your preference as well.
+In addition to using the webcomponents it is necessary to use the CDN below. Because all components use CSS variables this gives the general styling to all the components. You may fork and edit it to your preference as well.
 
 ```html
 <link
@@ -63,8 +69,17 @@ Click [here](https://github.com/501A-Designs/Palette#readme) to learn more about
 <a name="npm"></a>
 
 ## 📦 NPM Installation
+Type the following command in the terminal of your project.
 
 `npm i trim-design-tools --save`
+
+Add the following above the `</head>` tag.
+
+```html
+<script type="module" src="index.js" defer></script>
+<link rel="stylesheet" href="css/cssVariables.css">
+```
+
 
 <a name="acn"></a>
 

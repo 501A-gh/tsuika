@@ -1,6 +1,6 @@
 // CONTENT CARD
-const contentCardTemplate = document.createElement('template');
-contentCardTemplate.innerHTML = `
+const template = document.createElement('template');
+template.innerHTML = `
   <style>
     section{
       border-radius: var(borderRadius);
@@ -17,7 +17,7 @@ class contentCard extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(contentCardTemplate.content.cloneNode(true));
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
     this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header');
     if (this.getAttribute('header') === null) {
       this.shadowRoot.querySelector('h1').remove();

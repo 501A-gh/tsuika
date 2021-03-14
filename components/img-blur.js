@@ -1,14 +1,15 @@
-// GLANCE CARD
+// IMAGE BLUR
 const imgBlurTemplate = document.createElement('template');
 imgBlurTemplate.innerHTML = `
   <style>
     .blur {
       position: absolute;
-      filter: blur(16px) opacity(.6);
-      transform: scale(.92,.96);
+      filter: var(--lightBlur) opacity(.6);
+      transform: scale(1.02,1.02);
       z-index: -1;
       background-size: cover;
-      border-radius: var(borderRadius);
+      border-radius: var(--borderRadius);
+      animation: blur var(--transitionSpeed);
     }
     @keyframes blur{
       0%{
@@ -17,7 +18,10 @@ imgBlurTemplate.innerHTML = `
       }
     }
     img{
-      border-radius: var(borderRadius);
+      border-radius: var(--borderRadius);
+    }
+    section{
+      position:relative;
     }
     </style>
     <section>
@@ -41,7 +45,7 @@ class imgBlur extends HTMLElement {
       
       
     img.setAttribute('src', `${imgUrl}`);
-    img.setAttribute('style', `width:${width}; height:${height}`);
+    img.setAttribute('style', `width:${width}; height:${height}; margin-bottom:${top}`);
     
     blur.setAttribute('style', `background-image: url("${imgUrl}"); top:${top}; width:${width}; height:${height}`);
   }
