@@ -1,6 +1,6 @@
 {
   "name": "trim-design-tools",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Add advanced looking components with a simple touch.",
   "main": "index.js",
   "scripts": {

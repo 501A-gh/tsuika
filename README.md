@@ -23,8 +23,6 @@ Trim design tools is a design library thats lets you add advanced looking compon
 
 ## 👉 CDN
 
-
-
 Anybody can get started with Trim by inserting the following above the `</head>` tag.
 
 ```html
