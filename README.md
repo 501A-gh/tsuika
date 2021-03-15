@@ -26,7 +26,7 @@ Trim design tools is a design library thats lets you add advanced looking compon
 Anybody can get started with Trim by inserting the following above the `</head>` tag.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/index.js" defer></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/index.js" defer></script>
 <link
   href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/css/cssVariables.css"
   rel="stylesheet"

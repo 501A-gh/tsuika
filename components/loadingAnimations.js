@@ -82,12 +82,10 @@ class loadAnimation extends HTMLElement {
     this.shadowRoot.querySelector('h1').innerText = this.innerHTML;
     const objectColor = this.getAttribute('objColor');
     const aniType = this.getAttribute('aniType');
-
     this.shadowRoot.querySelector('.load-ani').setAttribute('style', `background-color:${objectColor}; animation: ${aniType} 1s infinite`);
-
-    // window.addEventListener("load", function() {
-    //   document.querySelector("load-animation").remove();
-    // });
+    window.addEventListener("load", function() {
+      document.querySelector("load-animation").remove();
+    });
   }
 }
 window.customElements.define('load-animation', loadAnimation);
