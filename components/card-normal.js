@@ -3,7 +3,7 @@ const template = document.createElement('template');
 template.innerHTML = `
   <style>
     section{
-      border-radius: var(borderRadius);
+      border-radius: var(--borderRadius);
       padding: var(--padding);
       box-shadow: var(--boxShadow);
     }
@@ -24,4 +24,4 @@ class contentCard extends HTMLElement {
     }
   }
 }
-window.customElements.define('content-card', contentCard);
+window.customElements.define('card-normal', contentCard);

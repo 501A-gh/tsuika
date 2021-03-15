@@ -141,4 +141,4 @@ class sideNavbar extends HTMLElement {
     })
   }
 }
-window.customElements.define('side-navbar', sideNavbar);
+window.customElements.define('nav-side', sideNavbar);

@@ -156,4 +156,4 @@ class glanceCard extends HTMLElement {
     })
   }
 }
-window.customElements.define('glance-card', glanceCard);
+window.customElements.define('card-glance', glanceCard);

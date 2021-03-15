@@ -4,6 +4,8 @@
   --btnTopPadding: 0.5em;
 
   /* GLOBAL ATTRIBUTES */
+  --font: Helvetica, Arial, sans-serif;
+  --headerFont: Helvetica, Arial, sans-serif;
   --margin: 5px;
   --padding: 15px;
   --btnBorderRadius: 10px;

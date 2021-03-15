@@ -2,19 +2,24 @@
 const imgBlurTemplate = document.createElement('template');
 imgBlurTemplate.innerHTML = `
   <style>
-    .blur {
+    div {
       position: absolute;
-      filter: var(--lightBlur) opacity(.6);
+      filter: var(--lightBlur) opacity(0.6);
       transform: scale(1.02,1.02);
       z-index: -1;
       background-size: cover;
       border-radius: var(--borderRadius);
+    }
+    .blurAction:hover{
+      transform: scale(0.92, 0.92);
       animation: blur var(--transitionSpeed);
     }
     @keyframes blur{
       0%{
+        transform: scale(1.02,1.02);
       }
-      35%{
+      100%{
+        transform: scale(0.92, 0.92);
       }
     }
     img{
@@ -25,8 +30,10 @@ imgBlurTemplate.innerHTML = `
     }
     </style>
     <section>
-        <img alt="No Image Found">
-        <div class="blur"></div>
+        <a>
+          <img alt="No Image Found">
+        </a>
+        <div></div>
     </section>
 `;
 class imgBlur extends HTMLElement {
@@ -34,20 +41,24 @@ class imgBlur extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(imgBlurTemplate.content.cloneNode(true));
-
+    const a = this.shadowRoot.querySelector("a");
     const img = this.shadowRoot.querySelector("img");
-    const blur = this.shadowRoot.querySelector(".blur");
-    const imgUrl = this.getAttribute('imgUrl') || this.getAttribute('url');
+    const div = this.shadowRoot.querySelector("div");
+    const hrefLink = this.getAttribute('hrefLink');
+    const imgUrl = this.getAttribute('imgUrl');
 
     const width = this.getAttribute('width') || this.getAttribute('x');
     const height = this.getAttribute('height') || this.getAttribute('y');
     const top = this.getAttribute('top') || this.getAttribute('distance');
-      
-      
+    
+    a.setAttribute('href', `${hrefLink}`);      
     img.setAttribute('src', `${imgUrl}`);
     img.setAttribute('style', `width:${width}; height:${height}; margin-bottom:${top}`);
     
-    blur.setAttribute('style', `background-image: url("${imgUrl}"); top:${top}; width:${width}; height:${height}`);
+    div.setAttribute('style', `background-image: url("${imgUrl}"); top:${top}; width:${width}; height:${height}`);
+    if (hrefLink ==! null) {
+      div.setAttribute('class', 'blurAction');
+    }
   }
 }
-window.customElements.define('img-blur', imgBlur);
+window.customElements.define('img-shadow', imgBlur);

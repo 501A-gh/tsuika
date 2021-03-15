@@ -28,4 +28,4 @@ class glassCard extends HTMLElement {
     }
   }
 }
-window.customElements.define('glass-card', glassCard);
+window.customElements.define('card-glass', glassCard);

@@ -86,4 +86,4 @@ class flexCardContainer extends HTMLElement {
     this.shadowRoot.appendChild(flexCardsTemplate.content.cloneNode(true));
   }
 }
-window.customElements.define('flex-cards', flexCardContainer);
+window.customElements.define('card-flex', flexCardContainer);

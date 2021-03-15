@@ -1,9 +1,24 @@
-import './components/content-card.js';
-import './components/flex-cards.js';
-import './components/glance-card.js';
-import './components/glass-card.js';
-import './components/graphs.js';
-import './components/img-blur.js';
-import './components/links&buttons.js';
-import './components/loadingAnimations.js';
-import './components/navbar.js';
+// Cards
+import './components/card-normal.js';
+import './components/card-flex.js';
+import './components/card-glance.js';
+import './components/card-glass.js';
+
+// Graph
+import './components/graph-bar.js';
+
+// Image
+import './components/img-shadow.js';
+
+// Button
+import './components/btn-link.js';
+
+// Links
+import './components/link-highlight.js';
+import './components/link-underline.js';
+
+// Load
+import './components/load-animation.js';
+
+// Navbar
+import './components/nav-side.js';

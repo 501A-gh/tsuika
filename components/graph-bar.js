@@ -51,4 +51,4 @@ class barGraph extends HTMLElement {
     this.shadowRoot.querySelector('div').setAttribute('style', `width:${percentage}%; background-color:${barColor};`);
   }
 }
-window.customElements.define('bar-graph', barGraph);
+window.customElements.define('graph-bar', barGraph);
