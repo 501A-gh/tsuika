@@ -1,6 +1,6 @@
 // CONTENT CARD
-const template = document.createElement('template');
-template.innerHTML = `
+const cardNormalTemplate = document.createElement('template');
+cardNormalTemplate.innerHTML = `
   <style>
     section{
       border-radius: var(--borderRadius);
@@ -13,15 +13,20 @@ template.innerHTML = `
      <slot></slot>
   </section>
 `;
-class contentCard extends HTMLElement {
+class cardNormal extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(cardNormalTemplate.content.cloneNode(true));
     this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header');
+    const card = this.shadowRoot.querySelector("section");
+    const cardColor = this.getAttribute('cardColor');
+    const txtColor = this.getAttribute('txtColor');
+
     if (this.getAttribute('header') === null) {
       this.shadowRoot.querySelector('h1').remove();
     }
+    card.setAttribute('style', `background-color:${cardColor}; color:${txtColor};`);
   }
 }
-window.customElements.define('card-normal', contentCard);
+window.customElements.define('card-normal', cardNormal);

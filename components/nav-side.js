@@ -36,6 +36,7 @@ sideNavbarTemplate.innerHTML = `
       template-columns-row: 1fr;
       row-gap:10px;
       width: 300px;
+      overflow-y:auto;
       color: black;
       cursor: pointer;
       z-index:99;

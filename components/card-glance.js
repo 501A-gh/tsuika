@@ -1,6 +1,6 @@
 // GLANCE CARD
-const glanceCardTemplate = document.createElement('template');
-glanceCardTemplate.innerHTML = `
+const cardGlanceTemplate = document.createElement('template');
+cardGlanceTemplate.innerHTML = `
   <style>
     .active-glance {
       height: 100%;
@@ -116,11 +116,11 @@ glanceCardTemplate.innerHTML = `
     <slot></slot>
   </section>
 `;
-class glanceCard extends HTMLElement {
+class cardGlance extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(glanceCardTemplate.content.cloneNode(true));
+    this.shadowRoot.appendChild(cardGlanceTemplate.content.cloneNode(true));
 
     const cardTitle = this.shadowRoot.querySelector("h1");
 
@@ -156,4 +156,4 @@ class glanceCard extends HTMLElement {
     })
   }
 }
-window.customElements.define('card-glance', glanceCard);
+window.customElements.define('card-glance', cardGlance);

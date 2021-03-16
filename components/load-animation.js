@@ -39,7 +39,7 @@ const loadAnimationTemplate = document.createElement('template')
         border-radius:10px;
       }
     }
-    @keyframes palse{
+    @keyframes pulse{
       0%{
         border-radius:30px;
         transform: scale3d(1,1,1);

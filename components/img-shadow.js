@@ -1,6 +1,6 @@
 // IMAGE BLUR
-const imgBlurTemplate = document.createElement('template');
-imgBlurTemplate.innerHTML = `
+const imgShadowTemplate = document.createElement('template');
+imgShadowTemplate.innerHTML = `
   <style>
     div {
       position: absolute;
@@ -36,11 +36,11 @@ imgBlurTemplate.innerHTML = `
         <div></div>
     </section>
 `;
-class imgBlur extends HTMLElement {
+class imgShadow extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(imgBlurTemplate.content.cloneNode(true));
+    this.shadowRoot.appendChild(imgShadowTemplate.content.cloneNode(true));
     const a = this.shadowRoot.querySelector("a");
     const img = this.shadowRoot.querySelector("img");
     const div = this.shadowRoot.querySelector("div");
@@ -61,4 +61,4 @@ class imgBlur extends HTMLElement {
     }
   }
 }
-window.customElements.define('img-shadow', imgBlur);
+window.customElements.define('img-shadow', imgShadow);

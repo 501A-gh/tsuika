@@ -1,6 +1,6 @@
 // GLASS CARD
-const glassCardTemplate = document.createElement('template');
-glassCardTemplate.innerHTML = `
+const cardGlassTemplate = document.createElement('template');
+cardGlassTemplate.innerHTML = `
   <style>
     .glass-card{
       border-radius: var(--borderRadius);
@@ -16,11 +16,11 @@ glassCardTemplate.innerHTML = `
      <slot></slot>
   </section>
 `;
-class glassCard extends HTMLElement {
+class cardGlass extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(glassCardTemplate.content.cloneNode(true));
+    this.shadowRoot.appendChild(cardGlassTemplate.content.cloneNode(true));
     this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header');
 
     if (this.getAttribute('header') === null) {
@@ -28,4 +28,4 @@ class glassCard extends HTMLElement {
     }
   }
 }
-window.customElements.define('card-glass', glassCard);
+window.customElements.define('card-glass', cardGlass);

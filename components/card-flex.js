@@ -1,6 +1,6 @@
 // FLEX CARD CONTAINER
-const flexCardsTemplate = document.createElement('template');
-  flexCardsTemplate.innerHTML = `
+const cardFlexTemplate = document.createElement('template');
+cardFlexTemplate.innerHTML = `
   <style>
   .flexCards{
     display: flex;
@@ -79,11 +79,11 @@ const flexCardsTemplate = document.createElement('template');
     <slot></slot>
   </section>
 `;
-class flexCardContainer extends HTMLElement {
+class cardFlexContainer extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(flexCardsTemplate.content.cloneNode(true));
+    this.shadowRoot.appendChild(cardFlexTemplate.content.cloneNode(true));
   }
 }
-window.customElements.define('card-flex', flexCardContainer);
+window.customElements.define('card-flex', cardFlexContainer);

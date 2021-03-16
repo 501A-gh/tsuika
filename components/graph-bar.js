@@ -1,6 +1,6 @@
 // GRAPH
-const barGraphTemplate = document.createElement('template');
-barGraphTemplate.innerHTML = `
+const graphBarTemplate = document.createElement('template');
+graphBarTemplate.innerHTML = `
   <style>
     h1{
       margin-bottom:10px;
@@ -30,11 +30,11 @@ barGraphTemplate.innerHTML = `
     <div></div>
   </section>
 `;
-class barGraph extends HTMLElement {
+class graphBar extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(barGraphTemplate.content.cloneNode(true));
+    this.shadowRoot.appendChild(graphBarTemplate.content.cloneNode(true));
 
     this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header')+" :";
 
@@ -43,7 +43,7 @@ class barGraph extends HTMLElement {
     }
 
     const percentage = this.getAttribute('%');
-    const barColor = this.getAttribute('color');
+    const barColor = this.getAttribute('barColor');
     const graphColor = this.getAttribute('graphColor');
 
     this.shadowRoot.querySelector('section').setAttribute('style', `background-color:${graphColor};`);
@@ -51,4 +51,4 @@ class barGraph extends HTMLElement {
     this.shadowRoot.querySelector('div').setAttribute('style', `width:${percentage}%; background-color:${barColor};`);
   }
 }
-window.customElements.define('graph-bar', barGraph);
+window.customElements.define('graph-bar', graphBar);

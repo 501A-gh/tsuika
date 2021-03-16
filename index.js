@@ -11,7 +11,7 @@ import './components/graph-bar.js';
 import './components/img-shadow.js';
 
 // Button
-import './components/btn-link.js';
+import './components/btn-normal.js';
 
 // Links
 import './components/link-highlight.js';
