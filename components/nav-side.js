@@ -11,7 +11,7 @@ sideNavbarTemplate.innerHTML = `
       left: 0px;
       -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
-      animation: blurAni 0.5s;
+      animation: blurAni var(--transitionSpeed);
     }
     @keyframes blurAni{
       0%{
@@ -57,15 +57,12 @@ sideNavbarTemplate.innerHTML = `
 
     button{
       outline:none;
+      background-color:var(--btnGrey);
+      border-radius: var(--btnBorderRadius);
+      opacity:80%;
+      padding: var(--btnPadding);
       border: none;
-      background-color:lightgrey;
-      border-radius:10px;
-      opacity:70%;
-      padding: 1em;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      border: none;
-      transition: 0.5s;
+      transition: var(--transitionSpeed);
       font-weight:bold;
     }
     button:hover{

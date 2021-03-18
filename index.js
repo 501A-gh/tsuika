@@ -1,5 +1,7 @@
 // Cards
 import './components/card-normal.js';
+import './components/card-p.js';
+
 import './components/card-flex.js';
 import './components/card-glance.js';
 import './components/card-glass.js';

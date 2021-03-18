@@ -12,12 +12,12 @@ const loadAnimationTemplate = document.createElement('template')
       z-index: 3;
       top: 0px;
       left: 0px;
-      -webkit-backdrop-filter: blur(50px);
-      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: var(--heavyBlur);
+      backdrop-filter: var(--heavyBlur);
     }
     h1{
-      margin-right:15px;
-      margin-left:15px;
+      margin-right: calc(var(--margin)*3);
+      margin-left: calc(var(--margin)*3);
       z-index: 4;
     }
     .load-ani {
@@ -47,7 +47,6 @@ const loadAnimationTemplate = document.createElement('template')
       70%{
         border-radius:30px;
         transform: scale3d(0.5,0.5,0.5);
-        
       }
       100%{
         border-radius:30px;

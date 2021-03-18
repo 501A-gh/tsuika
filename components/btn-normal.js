@@ -3,16 +3,13 @@ const btnNormalTemplate = document.createElement('template');
 btnNormalTemplate.innerHTML = `
   <style>
     .btn-standard {
-      padding: 1em;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      border: none;
+      padding: var(--btnPadding);
       transition: 0.5s;
       font-weight:bold;
       outline:none;
       border: none;
-      background-color:lightgrey;
-      border-radius:10px;
+      background-color:var(--btnGrey);
+      border-radius:var(--btnBorderRadius);
       opacity:70%;
     }
     .btn-standard:hover {

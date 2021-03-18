@@ -1,21 +1,32 @@
 :root {
   /* BUTTON STYLE */
+  --btnPadding:0.5em 1em 0.5em 1em;
   --btnSidePadding: 1em;
   --btnTopPadding: 0.5em;
+  --btnBorderRadius: 10px;
+  --btnGrey: lightgrey;
 
   /* GLOBAL ATTRIBUTES */
   --font: Helvetica, Arial, sans-serif;
-  --headerFont: Helvetica, Arial, sans-serif;
+  --headerFont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   --margin: 5px;
   --padding: 15px;
-  --btnBorderRadius: 10px;
-  --borderRadius: 15px;
+
+  /* ANIMATION */
+  --transitionSpeed: 0.5s;
+
+  /* BLUR */
+  --heavyBlur: blur(50px);
   --blur: blur(35px);
   --lightBlur:blur(16px);
-  --transitionSpeed: 0.5s;
 
   /* GRID */
   --gridGap: 5px;
+
+  /* BORDER */
+  --border: 1px solid var(--btnGrey);
+  --innerBorderRadius: 5px;
+  --borderRadius: 15px;
 
   /* BOX SHADOW */
   --boxShadow: 1px 1px 10px lightgrey;

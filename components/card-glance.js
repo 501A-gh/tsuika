@@ -4,7 +4,7 @@ cardGlanceTemplate.innerHTML = `
   <style>
     .active-glance {
       height: 100%;
-      padding:15px;
+      padding: var(-padding);
       border-radius:var(--borderRadius);
       max-height: 180px;
       overflow:hidden;
@@ -36,9 +36,9 @@ cardGlanceTemplate.innerHTML = `
       position: fixed;
       background-image:none;
       overflow-y: auto;
-      padding:15px;
-      -webkit-backdrop-filter: blur(35px);
-      backdrop-filter: blur(35px);
+      padding: var(--padding);
+      -webkit-backdrop-filter: var(--blur);
+      backdrop-filter: var(--blur);
       transition: calc(var(--transitionSpeed)*2);
       animation: popUpAni calc(var(--transitionSpeed)*2);
     }
@@ -47,7 +47,6 @@ cardGlanceTemplate.innerHTML = `
         transform: scale3d(0.1, 0.1, 0.1);
         box-shadow: var(--boxShadow);
         backdrop-filter: blur(0px);
-        border-radius: 5px;
         top:50px;
       }
       30%{
@@ -84,12 +83,10 @@ cardGlanceTemplate.innerHTML = `
     button{
       outline:none;
       border: none;
-      background-color:lightgrey;
+      background-color:var(--btnGrey);
       border-radius: var(--btnBorderRadius);
-      opacity:70%;
-      padding: var(--btnSidePadding);
-      padding-top: var(--btnTopPadding);
-      padding-bottom: var(--btnTopPadding);
+      opacity:80%;
+      padding: var(--btnPadding);
       transition: var(--transitionSpeed);
       font-weight:bold;
       float:right;
