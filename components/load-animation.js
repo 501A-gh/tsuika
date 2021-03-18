@@ -16,6 +16,7 @@ const loadAnimationTemplate = document.createElement('template')
       backdrop-filter: var(--heavyBlur);
     }
     h1{
+      font-family:var(--headerFont);
       margin-right: calc(var(--margin)*3);
       margin-left: calc(var(--margin)*3);
       z-index: 4;

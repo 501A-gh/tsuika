@@ -3,6 +3,7 @@ const btnNormalTemplate = document.createElement('template');
 btnNormalTemplate.innerHTML = `
   <style>
     .btn-standard {
+      margin:var(--margin);
       padding: var(--btnPadding);
       transition: 0.5s;
       font-weight:bold;

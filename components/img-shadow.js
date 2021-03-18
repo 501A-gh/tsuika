@@ -9,21 +9,37 @@ imgShadowTemplate.innerHTML = `
       z-index: -1;
       background-size: cover;
       border-radius: var(--borderRadius);
+      animation: loadAni var(--transitionSpeed);
     }
+    @keyframes loadAni{
+      0%{
+        top: 0px;
+        filter: blur(0px) opacity(0);
+        transform: scale(0.8, 0.8);
+      }
+      100%{
+        filter: var(--lightBlur) opacity(0.6);
+      }
+    }    
     .blurAction:hover{
-      transform: scale(0.92, 0.92);
       animation: blur var(--transitionSpeed);
     }
     @keyframes blur{
-      0%{
-        transform: scale(1.02,1.02);
-      }
-      100%{
-        transform: scale(0.92, 0.92);
+      40%{
+        transform: scale(0.7, 0.7);
       }
     }
     img{
       border-radius: var(--borderRadius);
+      animation: imgAni var(--transitionSpeed); 
+    }
+    @keyframes imgAni{
+      0%{
+        transform: scale(0.8,0.8);
+      }
+      50%{
+        transform: scale(1, 1);
+      }
     }
     section{
       position:relative;
@@ -56,8 +72,8 @@ class imgShadow extends HTMLElement {
     img.setAttribute('style', `width:${width}; height:${height}; margin-bottom:${top}`);
     
     div.setAttribute('style', `background-image: url("${imgUrl}"); top:${top}; width:${width}; height:${height}`);
-    if (hrefLink ==! null) {
-      div.setAttribute('class', 'blurAction');
+    if (hrefLink != null) {
+      img.setAttribute('class', 'blurAction');
     }
   }
 }

@@ -14,6 +14,7 @@ cardPTemplate.innerHTML = `
       border: var(--border);
     }
     .quote{
+      font-family:var(--headerFont);
       font-style:italic;
       box-shadow: -3px 0px 0px grey;
     }
