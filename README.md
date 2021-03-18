@@ -74,8 +74,8 @@ Type the following command in the terminal of your project.
 Add the following above the `</head>` tag.
 
 ```html
-<script type="module" src="index.js" defer></script>
-<link rel="stylesheet" href="css/cssVariables.css">
+<script type="module" src="node_modules/trim-design-tools/index.js" defer></script>
+<link rel="stylesheet" href="node_modules/trim-design-tools/css/cssVariables.css">
 ```
 
 

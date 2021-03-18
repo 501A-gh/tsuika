@@ -9,6 +9,7 @@ cardNormalTemplate.innerHTML = `
       font-family:var(--font);
       border-radius: var(--borderRadius);
       padding: var(--padding);
+      margin: var(--margin);
     }
     .boxShadow{
       box-shadow: var(--boxShadow);

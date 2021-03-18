@@ -11,9 +11,9 @@ highlightLinkTemplate.innerHTML = `
     }
     .highlight-link:hover {
       border-radius: 3px;
-      padding-right: 0.1em;
       margin-left: -0.1em;
       margin-right: -0.1em;
+      padding-right: 0.1em;
       padding-left: 0.1em;
       background-color: grey;
       opacity: 100%;

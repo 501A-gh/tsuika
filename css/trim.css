@@ -4,23 +4,15 @@
   --standardMargin: 5px;
   --standardPadding: 5px;
   --standardBorderRadius: 15px;
-  --borderRadius: 20px;
-  --blur: blur(35px);
   --transitionSpeed: 0.5s;
   --standardGridGap: 5px;
   --boxShadow: 1px 1px 10px lightgrey;
   --standardBoxShadow: 8px 8px 25px grey;
   --standardScale: scale3d(1.05, 1.05, 1.05);
 }
-/* ::-webkit-scrollbar-thumb {
-  border-radius: var(--standardBorderRadius);
-  background-color: rgb(158, 158, 158);
-  opacity: 40%;
-} */
 
 .bodyMargin{
-  font-family: Helvetica, Arial, sans-serif;
-  margin: 5px 5% 5px 5%;
+  margin: 5px 10% 5px 10%;
   position: relative;
 }
 
@@ -166,13 +158,6 @@
 }
 
 /* 🎴 Cards */
-.contentCards section,
-.contentCards div {
-  padding: var(--responsivePadding);
-  border-radius: var(--standardBorderRadius);
-  cursor: pointer;
-  box-shadow: var(--boxShadow);
-}
 .grid-auto div,
 .grid-1fr-1fr section div,
 .grid-1fr-1fr-1fr section div,
@@ -182,16 +167,6 @@
   padding: var(--responsivePadding);
   border-radius: var(--standardBorderRadius);
   cursor: pointer;
-}
-.grid-auto section img,
-.grid-1fr-1fr section img,
-.grid-1fr-1fr-1fr section img,
-.grid-1fr-1fr-1fr-1fr section img,
-.grid-1fr-1fr-1fr-1fr-1fr section img,
-.grid-1fr-1fr-1fr-1fr-1fr-1fr section img {
-  object-fit: cover;
-  border-radius: var(--standardBorderRadius);
-  width: 100%;
 }
 
 /* ⚡ Effects */

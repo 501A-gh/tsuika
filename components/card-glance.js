@@ -4,7 +4,7 @@ cardGlanceTemplate.innerHTML = `
   <style>
     .active-glance {
       height: 100%;
-      padding: var(-padding);
+      padding: var(--padding);
       border-radius:var(--borderRadius);
       max-height: 180px;
       overflow:hidden;

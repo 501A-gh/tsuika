@@ -37,6 +37,7 @@ sideNavbarTemplate.innerHTML = `
       row-gap:10px;
       width: 300px;
       overflow-y:auto;
+      height:80%
       color: black;
       cursor: pointer;
       z-index:99;
