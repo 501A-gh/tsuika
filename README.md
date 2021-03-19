@@ -18,7 +18,7 @@ Trim design tools is a design library thats lets you add advanced looking compon
 
 <a name="cdn"></a>
 
-## 👉 CDN
+## 👉 CDN (Recommended)
 
 Anybody can get started with Trim by inserting the following above the `</head>` tag.
 
@@ -64,24 +64,9 @@ Click [here](https://github.com/501A-Designs/Palette#readme) to learn more about
 <a name="npm"></a>
 
 ## 📦 NPM Installation
-Type the following command in the terminal of your project.
+If you want to tinker with the source feel free to do so by typing the following command in the terminal of your project.
 
 `npm i trim-design-tools --save`
-
-Add the following above the `</head>` tag.
-
-```html
-<script type="module" src="node_modules/trim-design-tools/index.js" defer></script>
-<link rel="stylesheet" href="node_modules/trim-design-tools/css/cssVariables.css">
-```
-
-Add a index.js file to your project and add the following code to you project:
-```html
-<script>
-  const trimComponent = require('trimcomponents');
-</script>
-```
-
 
 
 <a name="acn"></a>
