@@ -30,7 +30,6 @@ cardPTemplate.innerHTML = `
     }
   </style>
   <p>
-      <h1></h1>
       <slot></slot>
   </p>
 `;
@@ -44,11 +43,6 @@ class cardP extends HTMLElement {
     const cardColor = this.getAttribute('cardColor');
     const txtColor = this.getAttribute('txtColor');
     const borderType = this.getAttribute('borderType');
-  
-    this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header');
-    if (this.getAttribute('header') === null) {
-      this.shadowRoot.querySelector('h1').remove();
-    }
 
     p.setAttribute('style', `margin-left:${indent}; background-color:${cardColor}; color:${txtColor};`);
 
