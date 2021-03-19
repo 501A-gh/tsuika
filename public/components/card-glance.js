@@ -3,6 +3,7 @@ const cardGlanceTemplate = document.createElement('template');
 cardGlanceTemplate.innerHTML = `
   <style>
     .active-glance {
+      font-family: var(--font);
       height: 100%;
       padding: var(--padding);
       border-radius:var(--borderRadius);
@@ -29,6 +30,7 @@ cardGlanceTemplate.innerHTML = `
       }
     }
     .popUp {
+      font-family: var(--font);
       margin: none;
       border-radius: var(--borderRadius);
       box-shadow: var(--heavyBoxShadow);
@@ -81,6 +83,7 @@ cardGlanceTemplate.innerHTML = `
       }
     }
     button{
+      font-family: var(--font);
       outline:none;
       border: none;
       background-color:var(--btnGrey);
@@ -101,6 +104,9 @@ cardGlanceTemplate.innerHTML = `
     }
     .closeBtn{
       display:none;
+    }
+    h1{
+      font-family: var(--headerFont);
     }
     h1:hover{
       cursor:pointer;

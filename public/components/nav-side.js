@@ -25,12 +25,13 @@ sideNavbarTemplate.innerHTML = `
     }
 
     .sideNavBar{
-      border-radius: 20px;
+      font-family: var(--font);
+      border-radius: var(--borderRadius);
       margin-top:70px;
       margin-left:10px;
-      padding: 20px;
+      padding: var(--padding);
       background-color:white;
-      box-shadow:1px 1px 10px lightgrey;
+      box-shadow: var(--boxShadow);
       position:absolute;
       display:grid;
       template-columns-row: 1fr;
