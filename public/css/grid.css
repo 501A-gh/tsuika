@@ -1,0 +1,52 @@
+@import '/public/trim.css';
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-1fr-1fr,
+.grid-1fr-1fr-1fr,
+.grid-1fr-1fr-1fr-1fr,
+.grid-1fr-1fr-1fr-1fr-1fr,
+.grid-1fr-1fr-1fr-1fr-1fr-1fr {
+  display: grid;
+  gap: var(--margin);
+}
+/* 📱 For Mobile */
+@media only screen and (max-width: 400px) {
+  .grid-1fr-1fr,
+  .grid-1fr-1fr-1fr,
+  .grid-1fr-1fr-1fr-1fr,
+  .grid-1fr-1fr-1fr-1fr-1fr,
+  .grid-1fr-1fr-1fr-1fr-1fr-1fr {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .grid-1fr-1fr,
+  .grid-1fr-1fr-1fr,
+  .grid-1fr-1fr-1fr-1fr,
+  .grid-1fr-1fr-1fr-1fr-1fr,
+  .grid-1fr-1fr-1fr-1fr-1fr-1fr {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* 💻 For Desktop */
+@media only screen and (min-width: 601px) {
+  .grid-1fr-1fr {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-1fr-1fr-1fr {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid-1fr-1fr-1fr-1fr {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .grid-1fr-1fr-1fr-1fr-1fr {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .grid-1fr-1fr-1fr-1fr-1fr-1fr {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}

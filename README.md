@@ -25,11 +25,11 @@ Anybody can get started with Trim by inserting the following above the `</head>`
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/index.js" defer></script>
 <link
-  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/css/cssVariables.css"
+  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/trim.css"
   rel="stylesheet"
 />
 <link
-  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/css/trim.css"
+  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/classes.css"
   rel="stylesheet"
 />
 ```

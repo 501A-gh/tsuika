@@ -1,0 +1,55 @@
+@import '/public/trim.css';
+
+/* ⚡ Effects */
+.hover-rotation,
+.hover-scale,
+.hover-opacity,
+.hover-blur,
+.hover-arrow,
+.load-open,
+.load-wave,
+.load-drop {
+  transition: var(--transitionSpeed);
+}
+
+/* HOVER */
+.hover-rotation:hover {
+  box-shadow: 10px 30px 20px grey;
+  cursor: pointer;
+  animation: hoverAni var(--transitionSpeed);
+  transform: rotateX(40deg) rotateY(-0.5deg) rotateZ(-1.5deg);
+  transform-style: preserve-3d;
+}
+@keyframes hoverAni{
+  0%{
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  35%{
+    transform: rotateX(50deg) rotateY(-0.4deg) rotateZ(-1deg);
+  }
+}
+.hover-scale:hover {
+  transform: var(--scale);
+  box-shadow: var(--boxShadow);
+  cursor: pointer;
+  animation: hoverScale var(--transitionSpeed);
+}
+@keyframes hoverScale{
+  0%{
+    transform: none;
+  }
+  35%{
+    transform: scale3d(1.15,1.15,1.15);
+  }
+}
+.hover-opacity:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+.hover-blur:hover {
+  filter: blur(3px);
+  cursor: pointer;
+}
+.hover-arrow:hover::after {
+  content: " →";
+}

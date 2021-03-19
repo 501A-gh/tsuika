@@ -1,0 +1,55 @@
+@import '/public/trim.css';
+
+/* 📃 Styled Number List */
+#ol-round,
+#ol-capsule,
+#ol-rectangle,
+#ol-square {
+  max-width: 350px;
+  counter-reset: olCounter;
+  list-style: none;
+  padding-left: 0;
+}
+
+#ol-round li,
+#ol-capsule li,
+#ol-rectangle li,
+#ol-square li {
+  counter-increment: olCounter;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 5px;
+}
+
+#ol-round li::before,
+#ol-capsule li::before,
+#ol-rectangle li::before,
+#ol-square li::before {
+  content: counter(olCounter);
+  background: btnGrey;
+  color: black;
+  text-align: center;
+  position: absolute;
+}
+#ol-round li::before {
+  padding: 1.5px 6px 1.5px 6px;
+  border-radius: 100px;
+  left: 20px;
+  top: -1.5px;
+}
+#ol-capsule li::before {
+  padding: 0px 15px 0px 15px;
+  border-radius: 50px;
+  left: 0px;
+}
+#ol-rectangle li::before {
+  padding: 0px 15px 0px 15px;
+  border-radius: 5px;
+  left: 0px;
+}
+#ol-square li::before {
+  padding: 1.5px 6px 1.5px 6px;
+  border-radius: 5px;
+  left: 20px;
+  top: -1.5px;
+}

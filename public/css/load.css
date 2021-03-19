@@ -1,0 +1,77 @@
+@import '/public/trim.css';
+
+/* LOAD */
+.load-wave {
+animation: waveAni var(--transitionSpeed) ease-in;
+}
+@keyframes waveAni {
+0% {
+    clip-path: circle(0% at 0% 0%);
+    opacity: 50%;
+}
+100% {
+    clip-path: circle(100%);
+    opacity: 100%;
+}
+}
+
+.load-open {
+animation: openAni var(--transitionSpeed) ease-in;
+}
+@keyframes openAni {
+0% {
+    clip-path: inset(0% 0% 100% 0%);
+    opacity: 50%;
+}
+100% {
+    clip-path: inset(0% 0% 0% 0%);
+    opacity: 100%;
+}
+}
+
+@keyframes dropAni {
+0% {
+    transform: scale3d(10, 10, 10);
+    opacity: 0;
+    box-shadow: 10px 5px 10px black;
+}
+50% {
+    opacity: 0;
+    filter: blur(50px);
+    box-shadow: 3px 10px 10px black;
+}
+100% {
+    /* opacity: 100%; */
+    transform: scale3d(1, 1, 1);
+}
+}
+.load-drop section:nth-child(1) {
+animation: dropAni 0.5s;
+}
+.load-drop section:nth-child(2) {
+animation: dropAni 0.6s;
+}
+.load-drop section:nth-child(3) {
+animation: dropAni 0.7s;
+}
+.load-drop section:nth-child(4) {
+animation: dropAni 0.8s;
+}
+.load-drop section:nth-child(5) {
+animation: dropAni 0.9s;
+}
+.load-drop section:nth-child(6) {
+animation: dropAni 1s;
+}
+.load-drop section:nth-child(7) {
+animation: dropAni 1.1s;
+}
+.load-drop section:nth-child(8) {
+animation: dropAni 1.2s;
+}
+.load-drop section:nth-child(9) {
+animation: dropAni 1.3s;
+}
+.load-drop section:nth-child(10) {
+animation: dropAni 1.4s;
+}

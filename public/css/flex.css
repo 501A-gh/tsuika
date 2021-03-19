@@ -1,0 +1,20 @@
+@import '/public/trim.css';
+
+/* 🔛 Flex Box */
+.flex-standard,
+.flex-right,
+.flex-left,
+.flex-center,
+.flex-cards {
+  display: flex;
+  flex-direction: row;
+}
+.flex-right {
+  justify-content: right;
+}
+.flex-left {
+  justify-content: left;
+}
+.flex-center {
+  justify-content: center;
+}
