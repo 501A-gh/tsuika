@@ -75,6 +75,14 @@ Add the following above the `</head>` tag.
 <link rel="stylesheet" href="node_modules/trim-design-tools/css/cssVariables.css">
 ```
 
+Add a index.js file to your project and add the following code to you project:
+```html
+<script>
+  const trimComponent = require('trimcomponents');
+</script>
+```
+
+
 
 <a name="acn"></a>
 
