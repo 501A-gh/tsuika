@@ -2,9 +2,6 @@
 
 Note : This design library is still at its beta stage development.
 
-[![GitHub release](https://img.shields.io/github/v/release/501a-designs/trim-design-tools.svg)](https://GitHub.com/501a-designs/trim-design-tools/releases/)
-[![GitHub commits](https://img.shields.io/github/commits-since/501a-designs/trim-design-tools/v0.1.9.svg)](https://GitHub.com/501a-designs/trim-design-tools/commit/)
-
 Trim design tools is a design library thats lets you add advanced looking components, with a simple touch.
 
 ## Beta Release Changes / Features:
@@ -98,19 +95,6 @@ Using Pseudo Elements:
 - [Load](#load)
 
 
-## ⚠ Web Components Naming
-
-Trim Components:
-- [Content Cards](#cc)
-- [Buttons / Links](#btn\lnks)
-- [Glass Card](#gc)
-- [Graphs](#grphs)
-- [Flex Cards](#fcs)
-- [Glance Cars](#glc)
-- [Navigation Bar](#nvbr)
-- [Image Blur](#imgblr)
-
-
 
 <a name="sol"></a>
 
@@ -182,57 +166,3 @@ The `load-effectname` class will be enabled when the webpage has loaded. This co
 _`wave` and `open` best work with the `<details>` and `<summary>` HTML tags._
 
 v1.7 now supports the `load-animation` web component. You can change the color of the animating object using the `objColor` property.
-
-## Trim Web Components
-
-<a name="cc"></a>
-
-### 🎴 Content Cards:
-
-Using the `<content-card>` component enables you to show your information in a pre-styled card format.
-
-<a name="btn/lnks"></a>
-
-### 🔘 Buttons / Links:
-
-Trim comes with two types of links and a button. They can be added through using the `<highlight-link>` and `<underline-link>` components. The button can be called using the `<link-btn>` component.
-
-<a name="gc"></a>
-
-### 💳 Glass Cards:
-
-The glass cards component enables you to aestheically pleasing froasted glass effect.
-The component is structured with a `<h1>`,`<p>` and `<button>` tag.
-The `<h1>` tag can be accessed through the `header` attribute.
-The `button`'s display name can be changed through the `btn` attribute, and its link can be made through the `btnHref` attribute.
-
-<a name="grphs"></a>
-
-### 📊 Graphs:
-
-Graphs can be inserted by adding the `<bar-graph></bar-graph>` element, which creates a single horizontal bar-graph. The length of the bar-graph is decided by the `%` attribute. The `color` attribute enables you to change the color of the bar graph, and the `graphColor` attribute changes the graph containers color.
-
-<a name="fcs"></a>
-
-### 🔛 ＋ 🎴 Flex Cards:
-
-Flex cards utilize the flex box property and enables you to add a horizontally flowing card layout for displaying your short content. Use  the `<flex-card></flex-card>` element under the a section that has a `style` property of `display: flex; flex-direction: row;` or use the `flex-cards` class in the Trim class CDN.
-
-<a name="glc"></a>
-
-### 👀 Glance Card:
-
-Glance is initiated using the `<glance-card>` element. A title can be added using the `header` attribute.
-_Best works with CSS Grid._
-
-<a name="nvbr"></a>
-
-### 👆 Navigation Bar:
-
-Using the `<side-navbar>` component enables you to add an aesthtically pleasing navigation bar that can expan and retract using the pre-built buttons (renamable using the `btnStart` and `btnEnd` properties).
-
-<a name="imgblr"></a>
-
-### Image Blur:
-
-Using the `<img-blur>` component enables you to display images with a blurred shadow that corresponds with the color of the image (resizeable using the `width`, `height` and `top` properties. Add an image using the `imgUrl` or `url` property).
