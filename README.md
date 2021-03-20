@@ -23,28 +23,13 @@ Trim design tools is a design library thats lets you add advanced looking compon
 Anybody can get started with Trim by inserting the following above the `</head>` tag.
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/index.js" defer></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/index.js" defer></script>
 <link
-  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/trim.css"
+  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/trim.css"
   rel="stylesheet"
 />
 <link
-  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/classes.css"
-  rel="stylesheet"
-/>
-```
-
-Each webcomponent is saved in seperate files. To access a specific webcomponent, use the CDN below while referencing the JavaScript file name.
-
-```html
-<script src="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/components/<component-file-name>" defer></script>
-```
-
-In addition to using the webcomponents it is necessary to use the CDN below. Because all components use CSS variables this gives the general styling to all the components. You may fork and edit it to your preference as well.
-
-```html
-<link
-  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/css/cssVariables.css"
+  href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/classes.css"
   rel="stylesheet"
 />
 ```
