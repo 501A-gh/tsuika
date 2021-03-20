@@ -1,6 +1,6 @@
 /* CLASSES */
-@import '/public/css/flex.css';
-@import '/public/css/grid.css';
-@import '/public/css/hover.css';
-@import '/public/css/list.css';
-@import '/public/css/load.css';
+@import url("/public/css/flex.css");
+@import url("/public/css/grid.css");
+@import url("/public/css/hover.css");
+@import url("/public/css/list.css");
+@import url("/public/css/load.css");

@@ -1,27 +1,27 @@
 // Cards
-import './components/card-normal.js';
-import './components/card-p.js';
+import './components/card-normal';
+import './components/card-p';
 
-import './components/card-margin.js';
-import './components/card-flex.js';
-import './components/card-glance.js';
-import './components/card-glass.js';
+import './components/card-margin';
+import './components/card-flex';
+import './components/card-glance';
+import './components/card-glass';
 
 // Graph
-import './components/graph-bar.js';
+import './components/graph-bar';
 
 // Image
-import './components/img-shadow.js';
+import './components/img-shadow';
 
 // Button
-import './components/btn-normal.js';
+import './components/btn-normal';
 
 // Links
-import './components/link-highlight.js';
-import './components/link-underline.js';
+import './components/link-highlight';
+import './components/link-underline';
 
 // Load
-import './components/load-animation.js';
+import './components/load-animation';
 
 // Navbar
-import './components/nav-side.js';
+import './components/nav-side';
