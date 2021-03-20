@@ -1,32 +1,30 @@
-@import '/public/trim.css';
-
 /* LOAD */
 .load-wave {
 animation: waveAni var(--transitionSpeed) ease-in;
 }
 @keyframes waveAni {
-0% {
-    clip-path: circle(0% at 0% 0%);
-    opacity: 50%;
-}
-100% {
-    clip-path: circle(100%);
-    opacity: 100%;
-}
+    0% {
+        clip-path: circle(0% at 0% 0%);
+        opacity: 50%;
+    }
+    100% {
+        clip-path: circle(100%);
+        opacity: 100%;
+    }
 }
 
 .load-open {
 animation: openAni var(--transitionSpeed) ease-in;
 }
 @keyframes openAni {
-0% {
-    clip-path: inset(0% 0% 100% 0%);
-    opacity: 50%;
-}
-100% {
-    clip-path: inset(0% 0% 0% 0%);
-    opacity: 100%;
-}
+    0% {
+        clip-path: inset(0% 0% 100% 0%);
+        opacity: 50%;
+    }
+    100% {
+        clip-path: inset(0% 0% 0% 0%);
+        opacity: 100%;
+    }
 }
 
 @keyframes dropAni {
