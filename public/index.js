@@ -12,6 +12,7 @@ import './components/graph-bar.js';
 
 // Image
 import './components/img-shadow.js';
+import './components/img-mini.js';
 
 // Button
 import './components/btn-normal.js';
