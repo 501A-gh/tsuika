@@ -38,13 +38,13 @@ sideNavbarTemplate.innerHTML = `
       row-gap:10px;
       width: 300px;
       overflow-y:auto;
-      height:80%
+      max-height:500px
       color: black;
       cursor: pointer;
       z-index:99;
       animation: sideBarAni 1s;
     }
-
+    
     @keyframes sideBarAni{
       0%{
         margin-left:-500px;

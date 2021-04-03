@@ -11,13 +11,15 @@ cardGlassTemplate.innerHTML = `
       padding: var(--padding);
       -webkit-backdrop-filter: var(--blur);
       backdrop-filter: var(--blur);
+      background: var(--glassBack);
+      box-sizing: border-box;
       z-index:3;
     }
     .boxShadow{
       box-shadow: var(--boxShadow);
     }
     .border{
-      border: var(--border);
+      border: var(--glassBorder);
     }
   </style>
   <section>

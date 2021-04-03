@@ -35,12 +35,14 @@ cardGlanceTemplate.innerHTML = `
       border-radius: var(--borderRadius);
       box-shadow: var(--heavyBoxShadow);
       z-index: 2;
-      position: fixed;
-      background-image:none;
       overflow-y: auto;
+      position: fixed;
       padding: var(--padding);
       -webkit-backdrop-filter: var(--blur);
       backdrop-filter: var(--blur);
+      background: var(--glassBack);
+      box-sizing: border-box;
+
       transition: calc(var(--transitionSpeed)*2);
       animation: popUpAni calc(var(--transitionSpeed)*2);
     }
