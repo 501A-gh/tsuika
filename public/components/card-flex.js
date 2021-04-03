@@ -24,6 +24,7 @@ cardFlexTemplate.innerHTML = `
   }
   ::slotted(div),
   ::slotted(section){
+    font-family:var(--font);
     border-radius: var(--borderRadius);
     padding: var(--padding);
     height: 200px;
@@ -32,6 +33,7 @@ cardFlexTemplate.innerHTML = `
     margin-right: -50px;
     -webkit-backdrop-filter: var(--blur);
     backdrop-filter: var(--blur);
+    background: var(--glassBack);
     overflow: hidden;
     transition: 0.5s;
   }
@@ -47,20 +49,18 @@ cardFlexTemplate.innerHTML = `
     margin-right: 10px;
   }
   @media only screen and (max-width: 400px) {
-    ::slotted(div:hover),
-    ::slotted(section:hover){
-      transform: translateY(-5px);
-      margin-right: 10px;
+    ::slotted(div),
+    ::slotted(section){
+      margin: var(--margin);
       max-width:300px;
       min-width:150px;
       overflow-y:auto;
     }
   }
   @media only screen and (min-width: 401px) and (max-width: 600px) {
-    ::slotted(div:hover),
-    ::slotted(section:hover){
-      transform: translateY(-10px);
-      margin-right: 20px;
+    ::slotted(div),
+    ::slotted(section){
+      margin: var(--margin);
       height: 230px;
       min-width:175px;
     }

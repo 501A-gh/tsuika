@@ -4,6 +4,8 @@ import './components/card-p.js';
 
 import './components/card-margin.js';
 import './components/card-flex.js';
+import './components/card-carousel.js';
+
 import './components/card-glance.js';
 import './components/card-glass.js';
 
