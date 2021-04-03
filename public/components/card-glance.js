@@ -56,9 +56,6 @@ cardGlanceTemplate.innerHTML = `
       30%{
         transform: scale3d(1.2, 1.2, 1.2);
       }
-      60%{
-        transform: scale3d(0.9, 0.9, 0.9);
-      }
     }
     @media only screen and (max-width: 400px) {
       .popUp{
