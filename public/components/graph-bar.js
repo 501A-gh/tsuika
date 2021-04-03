@@ -6,14 +6,18 @@ graphBarTemplate.innerHTML = `
       margin-bottom:10px;
     }
     .bar-graph {
-      border-radius: 10px;
+      border-radius: var(--borderRadius);
       position: relative;
       width: auto;
       height: auto;
-      padding: 1px;
+      padding: 3px;
+
+      -webkit-backdrop-filter: var(--blur);
+      backdrop-filter: var(--blur);
+      background: var(--glassBack);
     }
     .bar-graph div {
-      border-radius: 5px;
+      border-radius: var(--borderRadius);
       height: 20px;
       position: relative;
       animation: bargraphAni 0.5s;
