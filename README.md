@@ -13,7 +13,6 @@ Trim design tools is a design library thats lets you add advanced looking compon
 ## 💡 Contents
 
 1. [Getting started with a CDN](#cdn)
-2. [NPM Installation](#npm)
 2. [Documentation](#acn)
 
 <a name="cdn"></a>
@@ -45,13 +44,6 @@ You can also insert the Palette CDN which will enable you to easily add color vi
 ```
 
 Click [here](https://github.com/501A-Designs/Palette#readme) to learn more about Palette.
-
-<a name="npm"></a>
-
-## 📦 NPM Installation
-If you want to tinker with the source feel free to do so by typing the following command in the terminal of your project.
-
-`npm i trim-design-tools --save`
 
 
 <a name="acn"></a>
