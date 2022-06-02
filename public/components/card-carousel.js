@@ -12,6 +12,9 @@ cardCarouselTemplate.innerHTML = `
   ::slotted(*){
     width:300px;
   }
+  ::slotted(table){
+    width:100%;
+  }
   </style>
   <section>
     <slot></slot>

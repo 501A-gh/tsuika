@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tsuika</title>
 
     <!-- Tsuika -->
     <link rel="stylesheet" href="./public/global.css"/>
-    <!-- <link rel="stylesheet" href="./public/themes/dark-night.css"/> -->
-    <!-- <link rel="stylesheet" href="./public/themes/tsuika.css"/> -->
-    <link rel="stylesheet" href="./public/themes/pink-purple.css"/>
+    <link rel="stylesheet" href="./public/themes/tsuika.css"/>
     <script src="./public/components/card-p.js" type="module"></script>
     <script src="./public/components/card-normal.js" type="module"></script>
     <script src="./public/components/graph-bar.js" type="module"></script>
@@ -19,13 +17,13 @@
     <script src="./public/components/space-between.js" type="module"></script>
 
 </head>
-<body class="load-wave">
+<body>
 <card-p type="banner">
     Note before using: Tsuika is still in development so many breaking changes may come in the near future. Please do not use Tsuika for any production or important applications.
 </card-p>
-<!-- <img-mini src="" x="50px" y="50px"/> -->
+<!-- <img-mini src="" x="50px" y="50px"/> --> 
 <header>
-    <h1>Tsuika・追加</h1>
+    <h1>Tsuika</h1>
     <div>
         <a href="https://github.com/501A-Designs/tsuika">GitHub</a> | 
         <a href="https://github.com/501A-Designs">Developer GitHub</a>
@@ -81,44 +79,46 @@
 <p>
     Because Tsuika are importing components seperately as modules it only uses the JavaScript files that you need! This treeshakable architecture makes it quick and performant.
 </p>
-<table>
-    <tr>
-        <th>Component</th>
-        <th>Description</th>
-        <th>Properties</th>
-        <th>Property Values</th>
-    </tr>
-    <tr>
-        <td><code>card-normal</code></td>
-        <td>A card component (Your new<code>div</code>)</td>
-        <td><code>borderType</code></td>
-        <td><code>boxShadow</code><code>border</code></td>
-    </tr>
-    <tr>
-        <td><code>card-p</code></td>
-        <td>A card component specifically made for text</td>
-        <td><code>type</code></td>
-        <td><code>banner</code><code>quote</code></td>
-    </tr>
-    <tr>
-        <td><code>card-carousel</code></td>
-        <td>Insert multiple components to activate a scrollable container.</td>
-        <td>N/A</td>
-        <td>N/A</td>
-    </tr>
-    <tr>
-        <td><code>graph-bar</code></td>
-        <td>A component to display a horizontal bar graph.</td>
-        <td><code>%</code></td>
-        <td>Integer as string</td>
-    </tr>
-    <tr>
-        <td><code>card-normal</code></td>
-        <td><code>borderType</code></td>
-        <td><code>borderType</code></td>
-        <td><code>borderType</code></td>
-    </tr>
-</table>
+<card-carousel>
+    <table>
+        <tr>
+            <th>Component</th>
+            <th>Description</th>
+            <th>Properties</th>
+            <th>Property Values</th>
+        </tr>
+        <tr>
+            <td><code>card-normal</code></td>
+            <td>A card component (Your new<code>div</code>)</td>
+            <td><code>borderType</code></td>
+            <td><code>boxShadow</code><code>border</code></td>
+        </tr>
+        <tr>
+            <td><code>card-p</code></td>
+            <td>A card component specifically made for text</td>
+            <td><code>type</code></td>
+            <td><code>banner</code><code>quote</code></td>
+        </tr>
+        <tr>
+            <td><code>card-carousel</code></td>
+            <td>Insert multiple components to activate a scrollable container.</td>
+            <td>N/A</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td><code>graph-bar</code></td>
+            <td>A component to display a horizontal bar graph.</td>
+            <td><code>%</code></td>
+            <td>Integer as string</td>
+        </tr>
+        <tr>
+            <td><code>card-normal</code></td>
+            <td><code>borderType</code></td>
+            <td><code>borderType</code></td>
+            <td><code>borderType</code></td>
+        </tr>
+    </table>
+</card-carousel>
 <h2>Themes</h2>
 <p>You can select a theme and use that to customize the looks of your website.</p>
 <card-carousel>
