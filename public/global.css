@@ -1,0 +1,147 @@
+body{
+  background-color: var(--backgroundColor);
+}
+*{
+  font-family:var(--font);
+  line-height: 1.5em;
+}
+/* Additional Styles */
+h1{
+  color:var(--textColor1);
+  font-family: var(--headerFont);
+}
+
+h2, h3, h4, h5, h6{
+  color:var(--textColor1);
+  font-family: var(--headerFont);
+  border-bottom: 1px solid var(--grey0);
+  height:fit-content;
+  width:fit-content;
+}
+button{
+  font-family: var(--font);
+  background-color:var(--accentColor0);
+  border: 1px solid var(--accentColor0);
+  border-radius: var(--borderRadius);
+  padding: var(--btnPadding);
+  transition: var(--transitionSpeed);
+  color: var(--textColor0);
+  cursor:pointer;
+  z-index:3;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%,var(--backgroundColor) 100%);
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  flex-direction: row;
+  z-index: 10;
+}
+
+img{
+  border: var(--border);
+  border-radius: var(--borderRadius);
+}
+
+a{
+  color: var(--textColor1);
+  text-decoration-color: var(--accentColor0);
+  text-decoration-style:wavy;
+}
+
+p{
+  margin-left: 1%;
+  color:var(--textColor1);
+}
+p::selection{
+  color: var(--textColor0);
+  background: var(--accentColor0)
+}
+
+code{
+  border-radius: var(--borderRadius);
+  background-color: var(--grey0);
+  border: 1px solid var(--grey1);
+  padding: 0.1em 0.3em;
+  margin: 0 0.3em;
+  font-size: 0.8em;
+  color:var(--accentColor1);
+}
+
+table {
+  border-collapse: collapse;
+  border-color: var(--accentColor1);
+  border: none;
+  overflow-x: scroll;
+  color:var(--textColor1);
+}
+
+th,td {
+  padding: 0.5em 1em;
+}
+
+th {
+  background-color:  var(--accentColor0);
+  color: var(--textColor0);
+  font-weight: bold;
+  border:1px solid var(--accentColor1);
+}
+
+td {
+  border:1px solid var(--grey3);
+}
+
+/* 📃 Styled Number List */
+ol,ul{
+  color: var(--textColor1);
+}
+ol {
+  counter-reset: olCounter;
+  list-style: none;
+  padding-left: 0;
+}
+ol li{
+  counter-increment: olCounter;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 5px;
+}
+ol li::before{
+  content: counter(olCounter);
+  background: var(--accentColor1);
+  color: var(--textColor0);
+  text-align: center;
+  position: absolute;
+  padding: 0px 1em 0px 1em;
+  border-radius: var(--borderRadius);
+  left: 0px;
+}
+strong{
+  color: var(--accentColor1)
+}
+
+/* 📱 For Mobile */
+@media only screen and (max-width: 400px) {
+  body{
+    padding:0 5%;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  body{
+    padding:0 8%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+  body{
+    padding:0 10%;
+  }
+}
+/* 💻 For Desktop */
+@media only screen and (min-width: 1001px) {
+  body{
+    padding:0 20%;
+  }
+}

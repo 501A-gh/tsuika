@@ -5,7 +5,8 @@ cardCarouselTemplate.innerHTML = `
   section{
     display: flex;
     flex-direction: row;
-    padding: var(--padding);
+    padding: calc(var(--padding)/2);
+    gap:1em;
     overflow-x: auto;
   }
   ::slotted(*){

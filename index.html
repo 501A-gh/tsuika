@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tsuika -->
+    <link rel="stylesheet" href="./public/global.css"/>
+    <!-- <link rel="stylesheet" href="./public/themes/dark-night.css"/> -->
+    <!-- <link rel="stylesheet" href="./public/themes/tsuika.css"/> -->
+    <link rel="stylesheet" href="./public/themes/pink-purple.css"/>
+    <script src="./public/components/card-p.js" type="module"></script>
+    <script src="./public/components/card-normal.js" type="module"></script>
+    <script src="./public/components/graph-bar.js" type="module"></script>
+    <script src="./public/components/card-glance.js" type="module"></script>
+    <script src="./public/components/card-carousel.js" type="module"></script>
+    <script src="./public/components/space-between.js" type="module"></script>
+
+</head>
+<body class="load-wave">
+<card-p type="banner">
+    Note before using: Tsuika is still in development so many breaking changes may come in the near future. Please do not use Tsuika for any production or important applications.
+</card-p>
+<!-- <img-mini src="" x="50px" y="50px"/> -->
+<header>
+    <h1>Tsuika・追加</h1>
+    <div>
+        <a href="https://github.com/501A-Designs/tsuika">GitHub</a> | 
+        <a href="https://github.com/501A-Designs">Developer GitHub</a>
+    </div>
+</header>
+<!-- <img src="./img/trimBanner.png" width="100%"/> -->
+<card-normal borderType="border">
+    <h3>Table of Contents</h3>
+    <ul>
+        <li>What is Tsuika?</li>
+        <li>Features</li>
+        <li>API Docs for Web Components</li>
+        <li>Themes</li>
+    </ul>
+</card-normal>
+<h2>What is Tsuika?</h2>
+<card-p type="quote">
+    “Simplicity is the ultimate sophistication.” — Leonardo da Vinci.
+</card-p>
+<p>
+    Tsuika is a web component and classless CSS framework that enables developers to create HTML websites quickly and easily. This project was originally intented to create only webcomponents however the growth of new.css had inspired many and enabled development of Tsuika to be something more than just a web component library. Tsuika aims to go above and beyond standard classless CSS frameworks by utilizing the power of web components.
+    <br/>
+    <br/>
+    The name "Tsuika" also derives from the Japanese word "追加" which means to add. Tsuika aims to add a set of original and powerful styles and web components on top of your standard HTML. 
+</p>
+<h2>Getting Started</h2>
+<ol>
+    <li>Choose a theme to use. As of now Tsuika supports 3 types of themes, however you can copy the contents of the theme css file and change it accordingly to create your own themes!</li>
+    <li>To get started simply go to the <a href="https://github.com/501A-Designs/tsuika">GitHub repository</a> where you can find further information about the CDN on the <code>README.md</code> file.</li>
+    <li>You should have three types of CDN links that specifies the following: The theme, <code>global.css</code> file, and finally the component JavaScript files (which should be in the <code>/components/</code>directory.)</li>
+    <li><strong>Your ready!</strong> Go ahead and start working on you website and enhance it with Tsuikas' versetile web components.</li>
+</ol>
+<h2>Features</h2>
+<card-normal borderType="boxShadow">
+    <h3>Fast & performant</h3>
+    <p>
+        Because Tsuika is importing components seperately as modules it only uses the JavaScript files that you need! This treeshakable architecture makes it quick and performant.
+    </p>
+</card-normal>
+<card-normal borderType="boxShadow">
+    <h3>Stronger with web components</h3>
+    <p>
+        In addition to styling by tags, Tsuika offers a multiple array of web components that makes it easy to add and remove powerful features on to your website like bar graphs and carousels!
+    </p>
+</card-normal>
+<card-normal borderType="boxShadow">
+    <h3>King of simplicity</h3>
+    <p>
+        Tsuika is without a doubt simple. No module bundlers and no need to use a package manager. All of its rich features can be accessible through its CDN!
+    </p>
+</card-normal>
+<h2>API Docs for Web Components</h2>
+<p>
+    Because Tsuika are importing components seperately as modules it only uses the JavaScript files that you need! This treeshakable architecture makes it quick and performant.
+</p>
+<table>
+    <tr>
+        <th>Component</th>
+        <th>Description</th>
+        <th>Properties</th>
+        <th>Property Values</th>
+    </tr>
+    <tr>
+        <td><code>card-normal</code></td>
+        <td>A card component (Your new<code>div</code>)</td>
+        <td><code>borderType</code></td>
+        <td><code>boxShadow</code><code>border</code></td>
+    </tr>
+    <tr>
+        <td><code>card-p</code></td>
+        <td>A card component specifically made for text</td>
+        <td><code>type</code></td>
+        <td><code>banner</code><code>quote</code></td>
+    </tr>
+    <tr>
+        <td><code>card-carousel</code></td>
+        <td>Insert multiple components to activate a scrollable container.</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td><code>graph-bar</code></td>
+        <td>A component to display a horizontal bar graph.</td>
+        <td><code>%</code></td>
+        <td>Integer as string</td>
+    </tr>
+    <tr>
+        <td><code>card-normal</code></td>
+        <td><code>borderType</code></td>
+        <td><code>borderType</code></td>
+        <td><code>borderType</code></td>
+    </tr>
+</table>
+<h2>Themes</h2>
+<p>You can select a theme and use that to customize the looks of your website.</p>
+<card-carousel>
+    <card-normal borderType="boxShadow">
+        <h3>Tsuika Default</h3>
+        <p>The theme being use currently on this site.</p>
+        <a href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/tsuika.css">View CSS File</a>
+    </card-normal>
+    <card-normal borderType="boxShadow">
+        <h3>Pink Purple</h3>
+        <p>A pastel pink theme that make your site look cute.</p>
+        <a href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/pink-purple.css">View CSS File</a>
+    </card-normal>
+    <card-normal borderType="boxShadow">
+        <h3>Dark Night</h3>
+        <p>A dark themed aesthetic with green accent colors.</p>
+        <a href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/dark-night.css">View CSS File</a>
+    </card-normal>
+</card-carousel>
+</body>
+</html>

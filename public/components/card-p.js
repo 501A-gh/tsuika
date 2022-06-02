@@ -5,28 +5,25 @@ cardPTemplate.innerHTML = `
       font-family:var(--font);
       border-radius: var(--innerBorderRadius);
       padding: var(--padding);
-      margin: calc(var(--margin)*2) 0px calc(var(--margin)*2)  0px;
+      margin: calc(var(--margin)*2) 0;
+      color:var(--textColor1);
     }
     .boxShadow{
       box-shadow: var(--boxShadow);
     }
-    .border{
-      border: var(--border);
+    .banner{
+      color: var(--textColor0);
+      background-color: var(--accentColor0);
+      border:1px solid var(--accentColor1);
+      border-radius: var(--borderRadius);
     }
     .quote{
       font-family:var(--headerFont);
       font-style:italic;
-      box-shadow: -3px 0px 0px grey;
-    }
-    .quote:before, .quote:after{
-        font-weight:bold;
-        font-size:18px;
-    }
-    .quote:before{
-        content:open-quote;
-    }
-    .quote:after{
-        content:close-quote;
+      border-radius:0px;
+      border-left: 2px solid var(--accentColor0);
+      background-color: var(--grey0);
+      border-radius:0px var(--borderRadius) var(--borderRadius) 0px;
     }
   </style>
   <p>
@@ -42,15 +39,15 @@ class cardP extends HTMLElement {
     const indent = this.getAttribute('indent');
     const cardColor = this.getAttribute('cardColor');
     const txtColor = this.getAttribute('txtColor');
-    const borderType = this.getAttribute('borderType');
+    const type = this.getAttribute('type');
 
     p.setAttribute('style', `margin-left:${indent}; background-color:${cardColor}; color:${txtColor};`);
 
-    if (borderType === "boxShadow") {
+    if (type === "boxShadow") {
       p.setAttribute('class', 'boxShadow');      
-    }if (borderType === "border") {
-      p.setAttribute('class', 'border');      
-    }if (borderType === "quote") {
+    }if (type === "banner") {
+      p.setAttribute('class', 'banner');      
+    }if (type === "quote") {
       p.setAttribute('class', 'quote');
     }
   }

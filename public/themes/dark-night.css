@@ -1,0 +1,43 @@
+:root {
+    /* BUTTON STYLE */
+    --btnPadding:0.5em 1em 0.5em 1em;
+    --btnSidePadding: 1em;
+    --btnTopPadding: 0.5em;
+    --backgroundColor:rgb(25, 25, 25);
+    --grey0: rgb(62, 62, 62);
+    --grey1:rgb(60, 60, 60);
+    --grey2:rgb(50,50,50);
+    --grey3:rgb(40,40,40);
+  
+    --textColor0:black;
+    --textColor1:white;
+    --accentColor0:rgb(31, 185, 0);
+    --accentColor1:rgb(0, 169, 56);
+  
+  
+    /* GLOBAL ATTRIBUTES */
+    --font: Helvetica, Arial, sans-serif;
+    --headerFont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+    --margin: 5px;
+    --padding: 15px;
+  
+    /* ANIMATION */
+    --transitionSpeed: 0.5s;
+  
+    /* GRID */
+    --gridGap: 5px;
+  
+    /* BORDER */
+    --border: 1px solid var(--grey1);
+    --borderRadius: 5px;
+  
+    /* BOX SHADOW */
+    --boxShadow: 0px 1px 5px var(--grey2);
+    --heavyBoxShadow: 8px 8px 25px grey;
+  
+    /* SCALE */
+    --smallScale: scale3d(0.5, 0.5, 0.5);
+    --scale: scale3d(1.05, 1.05, 1.05);
+  }
+  

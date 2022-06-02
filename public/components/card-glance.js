@@ -81,23 +81,6 @@ cardGlanceTemplate.innerHTML = `
         max-height: 800px;
       }
     }
-    button{
-      font-family: var(--font);
-      outline:none;
-      border: none;
-      background-color:var(--btnGrey);
-      border-radius: var(--btnBorderRadius);
-      opacity:80%;
-      padding: var(--btnPadding);
-      transition: var(--transitionSpeed);
-      font-weight:bold;
-      float:right;
-      z-index:3;
-    }
-    button:hover{
-      cursor:pointer;
-      opacity:100%;
-    }
     .openBtn{
       display:block;
     }

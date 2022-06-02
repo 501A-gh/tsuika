@@ -1,13 +1,8 @@
 // Cards
+import './components/card-carousel.js';
+import './components/card-glance.js';
 import './components/card-normal.js';
 import './components/card-p.js';
-
-import './components/card-margin.js';
-import './components/card-flex.js';
-import './components/card-carousel.js';
-
-import './components/card-glance.js';
-import './components/card-glass.js';
 
 // Graph
 import './components/graph-bar.js';
@@ -15,13 +10,6 @@ import './components/graph-bar.js';
 // Image
 import './components/img-shadow.js';
 import './components/img-mini.js';
-
-// Button
-import './components/btn-normal.js';
-
-// Links
-import './components/link-highlight.js';
-import './components/link-underline.js';
 
 // Load
 import './components/load-animation.js';

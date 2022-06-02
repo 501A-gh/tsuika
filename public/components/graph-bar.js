@@ -2,22 +2,18 @@
 const graphBarTemplate = document.createElement('template');
 graphBarTemplate.innerHTML = `
   <style>
-    h1{
-      margin-bottom:10px;
-    }
     .bar-graph {
       border-radius: var(--borderRadius);
       position: relative;
+      margin:var(--margin) 0;
       width: auto;
       height: auto;
       padding: 3px;
-
-      -webkit-backdrop-filter: var(--blur);
-      backdrop-filter: var(--blur);
-      background: var(--glassBack);
+      background-color: var(--grey1);
     }
     .bar-graph div {
-      border-radius: var(--borderRadius);
+      background-color: var(--accentColor0);
+      border-radius: calc(var(--borderRadius)/2);
       height: 20px;
       position: relative;
       animation: bargraphAni 0.5s;
@@ -29,7 +25,6 @@ graphBarTemplate.innerHTML = `
       }
     }
   </style>
-  <h1></h1>
   <section class="bar-graph">
     <div></div>
   </section>
@@ -39,20 +34,8 @@ class graphBar extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(graphBarTemplate.content.cloneNode(true));
-
-    this.shadowRoot.querySelector('h1').innerText = this.getAttribute('header')+" :";
-
-    if (this.getAttribute('header') === null) {
-      this.shadowRoot.querySelector('h1').remove();
-    }
-
     const percentage = this.getAttribute('%');
-    const barColor = this.getAttribute('barColor');
-    const graphColor = this.getAttribute('graphColor');
-
-    this.shadowRoot.querySelector('section').setAttribute('style', `background-color:${graphColor};`);
-
-    this.shadowRoot.querySelector('div').setAttribute('style', `width:${percentage}%; background-color:${barColor};`);
+    this.shadowRoot.querySelector('div').setAttribute('style', `width:${percentage}%;`);
   }
 }
 window.customElements.define('graph-bar', graphBar);
