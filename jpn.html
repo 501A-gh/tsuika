@@ -17,7 +17,7 @@
 </head>
 <body>
 <card-p type="banner">
-    Note before using: Tsuika is still in development so many breaking changes may come in the near future. Please do not use Tsuika for any production or important applications.
+    使用する上での注意：Tsuikaはまだ開発中であるため、多くの変更がなされる可能性があります。重要な用途は使用を御控えください。
 </card-p>
 <header>
     <h1>Tsuika</h1>
@@ -50,91 +50,91 @@
 </p>
 <h2>今すぐ始める</h2>
 <ol>
-    <li>Choose a theme to use. As of now Tsuika supports 3 types of themes, however you can copy the contents of the theme css file and change it accordingly to create your own themes!</li>
-    <li>To get started simply go to the <a href="https://github.com/501A-Designs/tsuika">GitHub repository</a> where you can find further information about the CDN on the <code>README.md</code> file.</li>
-    <li>You should have three types of CDN links that specifies the following: The theme, <code>global.css</code> file, and finally the component JavaScript files (which should be in the <code>/components/</code>directory.)</li>
-    <li><strong>Your ready!</strong> Go ahead and start working on you website and enhance it with Tsuikas' versetile web components.</li>
+    <li>使いたいテーマを選んで下さい。現在ろ、3種類のテーマに対応していますが、テーマのcssファイルの内容をコピーして、適宜変更することで、独自のテーマも作成することが可能となっています。</li>
+    <li><a href="https://github.com/501A-Designs/tsuika">TsuikaのGitHubのページ</a>を開くとCDNに関する詳しい情報が<code>README.md</code>のファイルに載っています。</li>
+    <li>大きく分けて三種類のCDNがあります。テーマのcssファイル、<code>global.css</code>ファイル、そして最後にweb componentの使用が可能となるJavaScriptファイル</li>
+    <li><strong>準備完了！</strong>通常のHTMLのウェブサイトを作る感覚でサイト作成をしてください。</li>
 </ol>
-<h2>Features</h2>
+<h2>機能</h2>
 <card-normal borderType="boxShadow">
     <h3>速い</h3>
     <p>
-        Because Tsuika is importing components seperately as modules it only uses the JavaScript files that you need! This treeshakable architecture makes it quick and performant.
+        NPMやモジュールバンドラーを使用していないためレンダリングをする必要無く非常に速いサイトが出来上がります。
     </p>
 </card-normal>
 <card-normal borderType="boxShadow">
     <h3>Web componentの力で強化</h3>
     <p>
-        In addition to styling by tags, Tsuika offers a multiple array of web components that makes it easy to add and remove powerful features on to your website like bar graphs and carousels!
+        タグにクラスをつける必要も無く、web componentsのおかげで、今までは時間掛けて作っていたモーダル、カルーセルは全てコンポーネントとして完結！
     </p>
 </card-normal>
 <card-normal borderType="boxShadow">
-    <h3>シンプリシティーを根本に</h3>
+    <h3>シンプリシティーをコアに</h3>
     <p>
-        Tsuika is without a doubt simple. No module bundlers and no need to use a package manager. All of its rich features can be accessible through its CDN!
+        Tsuikaは間違いなくシンプルです。そのシンプリシティーは出来上がるサイトだけでなく、裏で構築されているコードまでシンプルで分かりやすく設計されています。
     </p>
 </card-normal>
-<h2>API Docs for Web Components</h2>
+<h2>Web Components用ドキュメンテーション</h2>
 <p>
-    Because Tsuika are importing components seperately as modules it only uses the JavaScript files that you need! This treeshakable architecture makes it quick and performant.
+    コンポーネントをモジュールとして別々にインポートする選択肢があるため、必要なJavaScriptファイルのみを使用することができます。このツリーシャカブルアーキテクチャにより、高速かつ高性能を実現しています。
 </p>
 <card-carousel>
     <table>
         <tr>
-            <th>Component</th>
-            <th>Description</th>
-            <th>Properties</th>
-            <th>Property Values</th>
+            <th>コンポーネント</th>
+            <th>概要</th>
+            <th>プロパティ</th>
+            <th>値</th>
         </tr>
         <tr>
             <td><code>card-normal</code></td>
-            <td>A card component (Your new<code>div</code>)</td>
+            <td>カードコンポーネント（新たな<code>div</code>）</td>
             <td><code>borderType</code></td>
             <td><code>boxShadow</code><code>border</code></td>
         </tr>
         <tr>
             <td><code>card-p</code></td>
-            <td>A card component specifically made for text</td>
+            <td>テキストに適したカードコンポーネント</td>
             <td><code>type</code></td>
             <td><code>banner</code><code>quote</code></td>
         </tr>
         <tr>
             <td><code>card-glance</code></td>
-            <td>A card component to display long piece of information.</td>
+            <td>長文等をまとめてくれるモーダルコンポーネント</td>
             <td><code>btnStart</code><code>btnStart</code></td>
-            <td>The name of the button (String value)</td>
+            <td>ボタンの名前 (String値)</td>
         </tr>
         <tr>
             <td><code>card-carousel</code></td>
-            <td>Insert multiple components to activate a scrollable container.</td>
+            <td>横スクロール型のカルーセル</td>
             <td>N/A</td>
             <td>N/A</td>
         </tr>
         <tr>
             <td><code>graph-bar</code></td>
-            <td>A component to display a horizontal bar graph.</td>
+            <td>横に伸びる棒グラフを表示するコンポーネント</td>
             <td><code>%</code></td>
-            <td>Integer as string</td>
+            <td>Integerをstringとして入力</td>
         </tr>
     </table>
 </card-carousel>
-<h2>Themes</h2>
-<p>You can select a theme and use that to customize the looks of your website.</p>
+<h2>テーマ</h2>
+<p>テーマを選択し、それを使ってウェブサイトの外観をカスタマイズすることができます。</p>
 <card-carousel>
     <card-normal borderType="boxShadow">
-        <h3>Tsuika Default</h3>
-        <p>The theme being use currently on this site.</p>
-        <a href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/tsuika.css">View CSS File</a>
+        <h3>Tsuikaデフォルト</h3>
+        <p>本サイトで使われているテーマです</p>
+        <a href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/tsuika.css">CSSファイルを閲覧</a>
     </card-normal>
     <card-normal borderType="boxShadow">
         <h3>Pink Purple</h3>
-        <p>A pastel pink theme that make your site look cute.</p>
-        <a href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/pink-purple.css">View CSS File</a>
+        <p>ピンクと紫色を掛け合わせた可愛らしいテーマ</p>
+        <a href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/pink-purple.css">CSSファイルを閲覧</a>
     </card-normal>
     <card-normal borderType="boxShadow">
         <h3>Dark Night</h3>
-        <p>A dark themed aesthetic with green accent colors.</p>
-        <a href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/dark-night.css">View CSS File</a>
+        <p>黒と緑色のアクセントカラーを持ち合わせたクールなテーマ</p>
+        <a href="https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/dark-night.css">CSSファイルを閲覧</a>
     </card-normal>
 </card-carousel>
 </body>
