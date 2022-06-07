@@ -9,7 +9,8 @@ graphBarTemplate.innerHTML = `
       width: auto;
       height: auto;
       padding: 3px;
-      background-color: var(--grey1);
+      background-color: var(--grey0);
+      border:var(--border);
     }
     .bar-graph div {
       background-color: var(--accentColor0);

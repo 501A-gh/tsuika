@@ -2,84 +2,51 @@
 const cardGlanceTemplate = document.createElement('template');
 cardGlanceTemplate.innerHTML = `
   <style>
+    button{
+      float:right;
+      font-family: var(--font);
+      background-color:var(--accentColor0);
+      border: 1px solid var(--accentColor0);
+      border-radius: var(--borderRadius);
+      padding: var(--btnPadding);
+      transition: var(--transitionSpeed);
+      color: var(--textColor0);
+      cursor:pointer;
+    }
     .active-glance {
       font-family: var(--font);
       height: 100%;
       padding: var(--padding);
       border-radius:var(--borderRadius);
-      max-height: 180px;
+      max-height: 150px;
       overflow:hidden;
-      -webkit-backdrop-filter: var(--blur);
-      backdrop-filter: var(--blur);
+      border:var(--border);
+      margin: calc(var(--margin)*2) 0;
+      min-width:250px;
+      background-color: var(--backgroundColor);
       background-image: linear-gradient(
         to bottom,
         transparent,
         85%,
-        lightgrey
+        var(--grey1)
       );
-      animation:combackAni calc(var(--transitionSpeed)*2);
-    }
-    @keyframes combackAni{
-      0%{
-        box-shadow: var(--lightBoxShadow);
-        top:50px;
-        transform: var(--smallScale);
-      }
-      35%{
-        transform: scale3d(1.05, 1.05, 1.05);
-      }
     }
     .popUp {
       font-family: var(--font);
       margin: none;
       border-radius: var(--borderRadius);
       box-shadow: var(--heavyBoxShadow);
-      z-index: 2;
+      z-index: 20;
       overflow-y: auto;
-      position: fixed;
       padding: var(--padding);
-      -webkit-backdrop-filter: var(--blur);
-      backdrop-filter: var(--blur);
-      background: var(--glassBack);
+      border:var(--border);
+      background-color: var(--backgroundColor);
       box-sizing: border-box;
-
-      transition: calc(var(--transitionSpeed)*2);
-      animation: popUpAni calc(var(--transitionSpeed)*2);
-    }
-    @keyframes popUpAni{
-      0%{
-        transform: scale3d(0.1, 0.1, 0.1);
-        box-shadow: var(--boxShadow);
-        backdrop-filter: blur(0px);
-        top:50px;
-      }
-      30%{
-        transform: scale3d(1.2, 1.2, 1.2);
-      }
-    }
-    @media only screen and (max-width: 400px) {
-      .popUp{
-        width: 80%;
-        top: calc(10% - 25px);
-        right: calc(13% - 25px);
-        bottom: calc(10% - 25px);
-      }
-    }
-    @media only screen and (min-width: 401px) and (max-width: 600px) {
-      .popUp{
-        width: 75%;
-        top: calc(15% - 25px);
-        right: calc(15% - 25px);
-        bottom: calc(15% - 25px);
-      }
-    }
-    @media only screen and (min-width: 601px) {
-      .popUp{
-        width: 50%;
-        top: calc(25% - 25px);
-        right: calc(25% - 25px);
-        max-height: 800px;
-      }
+      min-width:300px;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
     .openBtn{
       display:block;

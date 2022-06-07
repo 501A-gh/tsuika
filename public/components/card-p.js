@@ -8,9 +8,6 @@ cardPTemplate.innerHTML = `
       margin: calc(var(--margin)*2) 0;
       color:var(--textColor1);
     }
-    .boxShadow{
-      box-shadow: var(--boxShadow);
-    }
     .banner{
       color: var(--textColor0);
       background-color: var(--accentColor0);
@@ -43,9 +40,7 @@ class cardP extends HTMLElement {
 
     p.setAttribute('style', `margin-left:${indent}; background-color:${cardColor}; color:${txtColor};`);
 
-    if (type === "boxShadow") {
-      p.setAttribute('class', 'boxShadow');      
-    }if (type === "banner") {
+    if (type === "banner") {
       p.setAttribute('class', 'banner');      
     }if (type === "quote") {
       p.setAttribute('class', 'quote');

@@ -27,7 +27,6 @@ button{
   transition: var(--transitionSpeed);
   color: var(--textColor0);
   cursor:pointer;
-  z-index:3;
 }
 
 header{
