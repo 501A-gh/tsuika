@@ -19,7 +19,6 @@
   /* GLOBAL ATTRIBUTES */
   --font: Helvetica, Arial, sans-serif;
   --headerFont: Helvetica, Arial, sans-serif;
-
   --margin: 5px;
   --padding: 15px;
 
@@ -36,8 +35,4 @@
   /* BOX SHADOW */
   --boxShadow: 0px 1px 5px var(--grey2);
   --heavyBoxShadow: 0px 8px 15px var(--grey3);
-
-  /* SCALE */
-  --smallScale: scale3d(0.5, 0.5, 0.5);
-  --scale: scale3d(1.05, 1.05, 1.05);
 }
