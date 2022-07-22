@@ -24,7 +24,7 @@ cardPTemplate.innerHTML = `
     }
   </style>
   <p>
-      <slot></slot>
+    <slot></slot>
   </p>
 `;
 class cardP extends HTMLElement {

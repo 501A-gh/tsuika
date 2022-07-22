@@ -9,7 +9,16 @@
     <!-- Tsuika -->
     <link rel="stylesheet" href="./public/global.css"/>
     <link rel="stylesheet" href="./public/themes/tsuika.css"/>
-    <script src="./public/index.js" type="module"></script>
+    <!-- <script src="./public/index.js" defer></script> -->
+    <script src="./public/components/card-p.js" type="module"></script>
+    <script src="./public/components/card-normal.js" type="module"></script>
+    <script src="./public/components/graph-bar.js" type="module"></script>
+    <script src="./public/components/card-glance.js" type="module"></script>
+    <script src="./public/components/card-carousel.js" type="module"></script>
+    <script src="./public/components/code-block.js" type="module"></script>
+
+    <!-- Shiki -->
+    <script src="https://unpkg.com/shiki"></script>
 </head>
 <body>
     <header>
@@ -71,5 +80,32 @@
     <graph-bar %="30"></graph-bar>
     <graph-bar %="50"></graph-bar>
     <graph-bar %="80"></graph-bar>
+
+    <div id="bruh"></div>
+
+    <h3>Code Block</h3>
+    <code-block
+        theme="nord"
+        lang="javascript"
+        code="
+        function myFunction() {
+            console.log('Hello Tsuika!');
+        }
+        "
+    ></code-block>
+    <card-normal borderType="border">
+        <h4>Another Demonstration</h4>
+        <p>This is a code block in a card component:</p>
+        <code-block
+            theme="nord"
+            lang="javascript"
+            code="
+            function sayHello() {
+                alert('Hello!')
+            }
+            "
+        ></code-block>
+        <p>Code blocks use the shiki Javascript library for syntax highlighting.</p>
+    </card-normal>
 </body>
 </html>

@@ -7,5 +7,5 @@ import './components/card-p.js';
 // Graph
 import './components/graph-bar.js';
 
-// Navbar
-import './components/nav-side.js';
+// Code
+import './components/code-block.js';

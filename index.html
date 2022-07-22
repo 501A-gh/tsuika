@@ -14,6 +14,9 @@
     <script src="./public/components/graph-bar.js" type="module"></script>
     <script src="./public/components/card-glance.js" type="module"></script>
     <script src="./public/components/card-carousel.js" type="module"></script>
+    <script src="./public/components/code-block.js" type="module"></script>
+
+    <script src="https://unpkg.com/shiki"></script>
 </head>
 <body>
 <card-p type="banner">
@@ -27,15 +30,6 @@
     </div>
 </header>
 <!-- <img src="./img/trimBanner.png" width="100%"/> -->
-<card-normal borderType="border">
-    <h3>Table of Contents</h3>
-    <ul>
-        <li>What is Tsuika?</li>
-        <li>Features</li>
-        <li>API Docs for Web Components</li>
-        <li>Themes</li>
-    </ul>
-</card-normal>
 <h2>What is Tsuika?</h2>
 <card-p type="quote">
     “Simplicity is the ultimate sophistication.” — Leonardo da Vinci.
@@ -46,11 +40,35 @@
     <br/>
     The name "Tsuika" also derives from the Japanese word "追加" which means to add. Tsuika aims to add a set of original and powerful styles and web components on top of your standard HTML. 
 </p>
+<card-normal borderType="border">
+    <h3>Demonstration</h3>
+    <p>So what do you mean by "powered by web components?". Well its easier to understand by looking under the hood. The quote label you just saw for instance was made with a single component. (so is the code block component below as well!)</p>
+    <code-block
+        theme="nord"
+        lang="javascript"
+        code="
+        &#60;card-p type='quote'&#62;
+            “Simplicity is the ultimate sophistication.” — Leonardo da Vinci.
+        &#60;/card-p&#62;
+        "
+    >
+    </code-block>
+    <p>
+        Like this you don't to style anything because Tsuika does that all for you. And unlike a standard classless CSS framework, Tsuika allows you to add a variety of styles to your static webpages. In otherwords, you can do the thing you meant to do which was focusing on the content.
+    </p>
+</card-normal>
 <h2>Getting Started</h2>
 <ol>
-    <li>Choose a theme to use. As of now Tsuika supports 3 types of themes, however you can copy the contents of the theme css file and change it accordingly to create your own themes!</li>
-    <li>To get started simply go to the <a href="https://github.com/501A-Designs/tsuika">GitHub repository</a> where you can find further information about the CDN on the <code>README.md</code> file.</li>
-    <li>You should have three types of CDN links that specifies the following: The theme, <code>global.css</code> file, and finally the component JavaScript files (which should be in the <code>/components/</code>directory.)</li>
+    <li>
+        Choose a theme to use. As of now Tsuika supports 3 types of themes, however you can copy the contents of the theme css file and change it accordingly to create your own themes!
+
+    </li>
+    <li>
+        To get started simply go to the <a href="https://github.com/501A-Designs/tsuika">GitHub repository</a> where you can find further information about the CDN on the <code>README.md</code> file.
+    </li>
+    <li>
+        You should have three types of CDN links that specifies the following: The theme, <code>global.css</code> file, and finally the component JavaScript files (which should be in the <code>/components/</code>directory.) *If you are using the <code>code-block</code> component, be sure to add the shiki CDN to the head of your html file.
+    </li>
     <li><strong>Your ready!</strong> Go ahead and start working on you website and enhance it with Tsuikas' versetile web components.</li>
 </ol>
 <h2>Features</h2>
@@ -72,7 +90,7 @@
         Tsuika is without a doubt simple. No module bundlers and no need to use a package manager. All of its rich features can be accessible through its CDN!
     </p>
 </card-normal>
-<h2>API Docs for Web Components</h2>
+<h2>Docs for Web Components</h2>
 <p>
     Because Tsuika are importing components seperately as modules it only uses the JavaScript files that you need! This treeshakable architecture makes it quick and performant.
 </p>
@@ -113,6 +131,16 @@
             <td>A component to display a horizontal bar graph.</td>
             <td><code>%</code></td>
             <td>Integer as string</td>
+        </tr>
+        <tr>
+            <td><code>code-block</code></td>
+            <td>A component to display a your code with syntax highlighting powered by <a href="https://github.com/shikijs/shiki">shiki</a>. All properties derive from the shiki library.</td>
+            <td>
+                <code>lang</code>
+                <code>theme</code>
+                <code>code</code>
+            </td>
+            <td>String value</td>
         </tr>
     </table>
 </card-carousel>
