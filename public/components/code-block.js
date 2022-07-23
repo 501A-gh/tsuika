@@ -9,6 +9,9 @@ codeBlockTemplate.innerHTML = `
   <style>
     pre{
       border-radius: var(--borderRadius);
+      overflow-x: scroll;
+      overflow-y: hidden;
+      margin: calc(var(--margin)*1) 0;
     }
     code{
       padding: var(--padding);
@@ -28,11 +31,10 @@ class codeBlock extends HTMLElement {
     const theme = this.getAttribute('theme');
     const codeText = this.getAttribute('code');
 
-    console.log(shiki)
+    pre.innerHTML = '<p style="text-align:center">Loading Code Block ...</p>';
     shiki.getHighlighter({
       theme: theme
-    })
-    .then(highlighter => {
+    }).then(highlighter => {
       const code = highlighter.codeToHtml(`${codeText}`, { lang: lang })
       pre.innerHTML = code;
     })

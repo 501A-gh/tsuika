@@ -15,6 +15,8 @@
     <script src="./public/components/graph-bar.js" type="module"></script>
     <script src="./public/components/card-glance.js" type="module"></script>
     <script src="./public/components/card-carousel.js" type="module"></script>
+    <script src="./public/components/container-split.js" type="module"></script>
+
     <script src="./public/components/code-block.js" type="module"></script>
 
     <!-- Shiki -->
@@ -81,9 +83,9 @@
     <graph-bar %="50"></graph-bar>
     <graph-bar %="80"></graph-bar>
 
-    <div id="bruh"></div>
-
     <h3>Code Block</h3>
+    <container-split>
+    <div>
     <code-block
         theme="nord"
         lang="javascript"
@@ -93,6 +95,8 @@
         }
         "
     ></code-block>
+    <p>Code blocks use the shiki Javascript library for its syntax highlighting. Therefore, you would need to add the shiki CDN to any pages you want to use the<code>code-block</code>component</p>
+    </div>
     <card-normal borderType="border">
         <h4>Another Demonstration</h4>
         <p>This is a code block in a card component:</p>
@@ -100,12 +104,12 @@
             theme="nord"
             lang="javascript"
             code="
-            function sayHello() {
-                alert('Hello!')
-            }
+        function sayHello() {
+            alert('Hello!')
+        }
             "
         ></code-block>
-        <p>Code blocks use the shiki Javascript library for syntax highlighting.</p>
     </card-normal>
+    </container-split>
 </body>
 </html>
