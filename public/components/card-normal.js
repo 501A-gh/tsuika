@@ -18,7 +18,7 @@ cardNormalTemplate.innerHTML = `
     }
   </style>
   <section>
-     <slot></slot>
+    <slot></slot>
   </section>
 `;
 class cardNormal extends HTMLElement {

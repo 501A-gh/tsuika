@@ -29,8 +29,9 @@
   --gridGap: 5px;
 
   /* BORDER */
-  --border: 1px solid var(--grey1);
   --borderRadius: 5px;
+  --borderWidth: 1px;
+  --border: var(--borderWidth) solid var(--grey1);
 
   /* BOX SHADOW */
   --boxShadow: 0px 1px 5px var(--grey2);

@@ -1,20 +1,23 @@
 :root {
-  /* BUTTON STYLE */
-  --btnPadding:0.5em 1em 0.5em 1em;
-  --btnSidePadding: 1em;
-  --btnTopPadding: 0.5em;
+  /* ACCENT COLORS */
+  --accentColor0:rgb(93, 93, 93);
+  --accentColor1:rgb(77, 77, 77);
+
+  /* THEME COLORS */
   --backgroundColor:#ebebeb;
   --grey0:rgb(221, 221, 221);
   --grey1:rgb(209, 209, 209);
   --grey2:rgb(180, 180, 180);
   --grey3:rgb(174, 174, 174);
-  
+
+  /* TEXT COLOR */
   --textColor0:white;
   --textColor1:black;
 
-  --accentColor0:rgb(93, 93, 93);
-  --accentColor1:rgb(77, 77, 77);
-
+  /* BUTTON STYLE */
+  --btnPadding:0.5em 1em 0.5em 1em;
+  --btnSidePadding: 1em;
+  --btnTopPadding: 0.5em;
 
   /* GLOBAL ATTRIBUTES */
   --font: Helvetica, Arial, sans-serif;

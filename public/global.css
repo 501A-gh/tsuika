@@ -14,7 +14,7 @@ h1{
 h2, h3, h4, h5, h6{
   color:var(--textColor1);
   font-family: var(--headerFont);
-  border-bottom: 1px solid var(--grey0);
+  border-bottom: var(--borderWidth) solid var(--grey0);
   height:fit-content;
   width:fit-content;
 }
@@ -55,6 +55,7 @@ p{
   margin-left: 1%;
   color:var(--textColor1);
 }
+
 p::selection{
   color: var(--textColor0);
   background: var(--accentColor0)
@@ -87,11 +88,11 @@ th {
   background-color:  var(--accentColor0);
   color: var(--textColor0);
   font-weight: bold;
-  border:1px solid var(--accentColor1);
+  border:var(--borderWidth) solid var(--accentColor1);
 }
 
 td {
-  border:1px solid var(--grey3);
+  border:var(--borderWidth) solid var(--grey1);
 }
 
 /* 📃 Styled Number List */

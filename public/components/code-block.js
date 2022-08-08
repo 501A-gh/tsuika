@@ -12,15 +12,17 @@ codeBlockTemplate.innerHTML = `
       overflow-x: scroll;
       overflow-y: hidden;
       margin: calc(var(--margin)*1) 0;
+      white-space: pre-wrap;
     }
     code{
-      padding: var(--padding);
+      padding: calc(var(--padding));
     }
-  </style>
-  <pre>
-    <code></code>
-  </pre>
-`;
+    </style>
+    <pre>
+    </pre>
+    `;
+    // <code>
+    // </code>
 class codeBlock extends HTMLElement {
   constructor() {
     super();

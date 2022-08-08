@@ -11,7 +11,7 @@ cardPTemplate.innerHTML = `
     .banner{
       color: var(--textColor0);
       background-color: var(--accentColor0);
-      border:1px solid var(--accentColor1);
+      border:var(--borderWidth) solid var(--accentColor1);
       border-radius: var(--borderRadius);
     }
     .quote{
