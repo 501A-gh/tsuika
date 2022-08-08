@@ -1,0 +1,38 @@
+:root {
+  /* BUTTON STYLE */
+  --btnPadding:0.5em 1em 0.5em 1em;
+  --btnSidePadding: 1em;
+  --btnTopPadding: 0.5em;
+  --backgroundColor:rgb(252, 239, 202);
+  --grey0: rgb(240, 220, 170);
+  --grey1:rgb(230, 208, 151);
+  --grey2:rgb(228, 199, 127);
+  --grey3:rgb(215, 187, 114);
+
+  --textColor0:white;
+  --textColor1:black;
+
+  --accentColor0:rgb(162, 133, 0);
+  --accentColor1:rgb(150, 125, 0);
+
+
+  /* GLOBAL ATTRIBUTES */
+  --font:'Gill Sans', 'Gill Sans MT', Calibri;
+  --headerFont: Helvetica, Arial, sans-serif;
+  --margin: 5px;
+  --padding: 15px;
+
+  /* ANIMATION */
+  --transitionSpeed: 0.5s;
+
+  /* GRID */
+  --gridGap: 5px;
+
+  /* BORDER */
+  --border: 1px solid var(--grey1);
+  --borderRadius: 5px;
+
+  /* BOX SHADOW */
+  --boxShadow: 0px 1px 5px var(--grey2);
+  --heavyBoxShadow: 0px 8px 15px var(--grey3);
+}

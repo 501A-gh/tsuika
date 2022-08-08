@@ -126,17 +126,17 @@ strong{
 /* 📱 For Mobile */
 @media only screen and (max-width: 400px) {
   body{
-    padding:0 5%;
+    padding:0 2%;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 600px) {
   body{
-    padding:0 8%;
+    padding:0 5%;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 1000px) {
   body{
-    padding:0 10%;
+    padding:0 8%;
   }
 }
 /* 💻 For Desktop */
