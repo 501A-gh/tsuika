@@ -8,12 +8,20 @@
 
     <!-- Tsuika -->
     <link rel="stylesheet" href="./public/global.css"/>
+
+    <!-- Theme -->
     <link rel="stylesheet" href="./public/themes/tsuika.css"/>
+
     <script src="./public/components/card-p.js" type="module"></script>
     <script src="./public/components/card-normal.js" type="module"></script>
     <script src="./public/components/graph-bar.js" type="module"></script>
     <script src="./public/components/card-glance.js" type="module"></script>
     <script src="./public/components/card-carousel.js" type="module"></script>
+    <script src="./public/components/container-split.js" type="module"></script>
+    <script src="./public/components/code-block.js" type="module"></script>
+
+    <!-- Shiki -->
+    <script src="https://unpkg.com/shiki"></script>
 </head>
 <body>
 <card-p type="banner">
@@ -27,18 +35,9 @@
     </div>
 </header>
 <!-- <img src="./img/trimBanner.png" width="100%"/> -->
-<card-normal borderType="border">
-    <h3>目次</h3>
-    <ul>
-        <li>Tsuikaとは？</li>
-        <li>機能</li>
-        <li>Web Components用ドキュメンテーション</li>
-        <li>テーマ</li>
-    </ul>
-</card-normal>
 <h2>Tsuikaとは？</h2>
 <card-p type="quote">
-    "シンプルは究極の洗練" ー　レオナルド・ダ・ヴィンチ
+    “シンプルは究極の洗練” ー　レオナルド・ダ・ヴィンチ
 </card-p>
 <p>
     TsuikaはWebコンポーネントとクラスレスCSSフレームワークの良さを取り入れたシンプルなCSSフレームワークです。開発者がHTMLサイトを素早く簡単に作成できるようにするためのものです。Tsuikaは、Webコンポーネントの力を活用し、より機能豊富なクラスレスCSSフレームワークです。なお、「Tsuika」という名前は、通常のHTMLに「追加する」という意味でつけられました。
@@ -46,13 +45,24 @@
     <br/>
     Tsuikaに関する記事をZennで投稿させていただきました：<a href="https://zenn.dev/501a/articles/31f49ccfa14139">Zennの記事はこちら</a>
 </p>
-<h2>今すぐ始める</h2>
-<ol>
-    <li>使いたいテーマを選んで下さい。現在ろ、3種類のテーマに対応していますが、テーマのcssファイルの内容をコピーして、適宜変更することで、独自のテーマも作成することが可能となっています。</li>
-    <li><a href="https://github.com/501A-Designs/tsuika">TsuikaのGitHubのページ</a>を開くとCDNに関する詳しい情報が<code>README.md</code>のファイルに載っています。</li>
-    <li>大きく分けて三種類のCDNがあります。テーマのcssファイル、<code>global.css</code>ファイル、そして最後にweb componentの使用が可能となるJavaScriptファイル</li>
-    <li><strong>準備完了！</strong>通常のHTMLのウェブサイトを作る感覚でサイト作成をしてください。</li>
-</ol>
+<card-normal borderType="border">
+    <h3>デモ</h3>
+    <p>「Webコンポーネントの力を活用」とはどういう意味なのか？Tsuikaで作成されたサイトを見ればすぐ理解することができます。上記にあるレオナルド・ダ・ヴィンチの名言はたったひとつのウェブコンポーネントを使用して作られたものです。（以下のコードスニピットも！）</p>
+    <code-block
+        theme="nord"
+        lang="javascript"
+        code="
+        &#60;card-p type='quote'&#62;
+            “シンプルは究極の洗練” ー　レオナルド・ダ・ヴィンチ
+        &#60;/card-p&#62;
+        "
+    >
+    </code-block>
+    <p>
+        このように、Tsuikaを使用するとCSSに一切触れる必要がありません！また、通常のクラス無しCSS frameworkとは異なり、あらゆるテーマやウェブコンポーネントを通し自分にあったサイトの作成に励むことができます。要するにサイトを作る作業をコンテンツにさくことが出来ます。
+    </p>
+</card-normal>
+
 <h2>機能</h2>
 <card-normal borderType="boxShadow">
     <h3>速い</h3>
@@ -76,6 +86,8 @@
 <p>
     コンポーネントをモジュールとして別々にインポートする選択肢があるため、必要なJavaScriptファイルのみを使用することができます。このツリーシャカブルアーキテクチャにより、高速かつ高性能を実現しています。
 </p>
+
+
 <card-carousel>
     <table>
         <tr>
@@ -116,39 +128,22 @@
         </tr>
     </table>
 </card-carousel>
-<h2>テーマ</h2>
-<p>テーマを選択し、それを使ってウェブサイトの外観をカスタマイズすることができます。</p>
-<card-carousel>
-    <card-normal borderType="boxShadow">
-        <h3>Tsuikaデフォルト</h3>
-        <p>本サイトで使われているテーマです</p>
-        <code-block
-            theme="nord"
-            lang="html"
-            code="&#60;link href='https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/tsuika.css' rel='stylesheet'/&#62;"
-        >
-        </code-block>
-    </card-normal>
-    <card-normal borderType="boxShadow">
-        <h3>Pink Purple</h3>
-        <p>ピンクと紫色を掛け合わせた可愛らしいテーマ</p>
-        <code-block
-            theme="nord"
-            lang="html"
-            code="&#60;link href='https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/pink-purple.css' rel='stylesheet'/&#62;"
-        >
-        </code-block>
-    </card-normal>
-    <card-normal borderType="boxShadow">
-        <h3>Dark Night</h3>
-        <p>黒と緑色のアクセントカラーを持ち合わせたクールなテーマ</p>
-        <code-block
-            theme="nord"
-            lang="html"
-            code="&#60;link href='https://cdn.jsdelivr.net/gh/501A-Designs/Trim/public/themes/dark-night.css' rel='stylesheet'/&#62;"
-        >
-        </code-block>
-    </card-normal>
-</card-carousel>
+
+<h2>今すぐ始める</h2>
+<ol>
+    <container-split>
+        <li>使いたいテーマを選んで下さい。現在ろ、3種類のテーマに対応していますが、テーマのcssファイルの内容をコピーして、適宜変更することで、独自のテーマも作成することが可能となっています。</li>
+        <li><a href="https://github.com/501A-Designs/tsuika">TsuikaのGitHubのページ</a>を開くとCDNに関する詳しい情報が<code>README.md</code>のファイルに載っています。</li>
+        <li>大きく分けて三種類のCDNがあります。テーマのcssファイル、<code>global.css</code>ファイル、そして最後にweb componentの使用が可能となるJavaScriptファイル</li>
+        <li><strong>準備完了！</strong>通常のHTMLのウェブサイトを作る感覚でサイト作成をしてください。</li>
+    </container-split>
+</ol>
+
+<card-normal borderType="border">
+    <h2>テーマ</h2>
+    <p>テーマを選択し、それを使ってウェブサイトの外観をカスタマイズすることができます。</p>
+    <a href="/themes.html">テーマを全て見る</a>
+</card-normal>
+
 </body>
 </html>

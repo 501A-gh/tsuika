@@ -3,7 +3,7 @@ body{
 }
 *{
   font-family:var(--font);
-  line-height: 1.5em;
+  line-height: 1.8em;
 }
 /* Additional Styles */
 h1{
@@ -120,7 +120,14 @@ ol li::before{
   left: 0px;
 }
 strong{
-  color: var(--accentColor1)
+  color: var(--accentColor0)
+}
+
+mark{
+  color: var(--textColor0);
+  background-color: var(--accentColor0);
+  /* border-radius: var(--borderRadius); */
+  padding: 0.2em 0.3em;
 }
 
 /* 📱 For Mobile */
@@ -139,10 +146,15 @@ strong{
     padding:0 8%;
   }
 }
-/* 💻 For Desktop */
-@media only screen and (min-width: 1001px) {
+@media only screen and (min-width: 1001px) and (max-width: 1300px) {
   body{
-    padding:0 20%;
+    padding:0 15%;
+  }
+}
+/* 💻 For Desktop */
+@media only screen and (min-width: 1301px) {
+  body{
+    padding:0 22%;
   }
 }
 
