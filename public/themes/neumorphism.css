@@ -1,0 +1,38 @@
+:root {
+  /* BUTTON STYLE */
+  --btnPadding:0.5em 1em 0.5em 1em;
+  --btnSidePadding: 1em;
+  --btnTopPadding: 0.5em;
+  --backgroundColor:#ebebeb;
+  --grey0:rgb(221, 221, 221);
+  --grey1:rgb(209, 209, 209);
+  --grey2:rgb(180, 180, 180);
+  --grey3:rgb(174, 174, 174);
+  
+  --textColor0:white;
+  --textColor1:black;
+
+  --accentColor0:rgb(93, 93, 93);
+  --accentColor1:rgb(77, 77, 77);
+
+
+  /* GLOBAL ATTRIBUTES */
+  --font: Helvetica, Arial, sans-serif;
+  --headerFont: Helvetica, Arial, sans-serif;
+  --margin: 10px;
+  --padding: 15px;
+
+  /* ANIMATION */
+  --transitionSpeed: 0.5s;
+
+  /* GRID */
+  --gridGap: 15px;
+
+  /* BORDER */
+  --border: 1px solid var(--grey1);
+  --borderRadius: 10px;
+
+  /* BOX SHADOW */
+  --boxShadow: 9px 9px 16px rgb(163 177 198 / 50%), -9px -9px 16px rgb(255 255 255);;
+  --heavyBoxShadow: 0px 8px 15px var(--grey3);
+}

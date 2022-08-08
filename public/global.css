@@ -62,7 +62,7 @@ p::selection{
 
 code{
   font-family: monospace;
-  border-radius: var(--borderRadius);
+  border-radius: calc(var(--borderRadius)/2);
   background-color: var(--grey0);
   border: 1px solid var(--grey1);
   padding: 0.1em 0.3em;
@@ -126,7 +126,7 @@ strong{
 mark{
   color: var(--textColor0);
   background-color: var(--accentColor0);
-  /* border-radius: var(--borderRadius); */
+  border-radius: calc(var(--borderRadius)/4);
   padding: 0.2em 0.3em;
 }
 
