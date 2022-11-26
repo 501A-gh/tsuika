@@ -1,44 +1,37 @@
 const codeBlockTemplate = document.createElement('template');
-// margin: calc(var(--margin)*2) 0;
-// font-family:var(--font);
-// color:var(--textColor1);
-
-// border: var(--border);
-
 codeBlockTemplate.innerHTML = `
   <style>
-    pre{
+    #codeBlock{
+      font-family:monospace;
+      color:var(--accentColor1);
       border-radius: var(--borderRadius);
       overflow-x: scroll;
       overflow-y: hidden;
       margin: calc(var(--margin)*1) 0;
-      white-space: pre-wrap;
+      padding: var(--padding);
+      background-color:var(--backgroundColor);
+      border:1px solid var(--grey1);
+      box-shadow:var(--lightBoxShadow);
+      cursor:pointer;
     }
-    code{
-      padding: calc(var(--padding));
+    #codeBlock:hover{
+      border:1px solid var(--accentColor0);
+      opacity:0.8
     }
-    </style>
-    <pre>
-    </pre>
-    `;
-    // <code>
-    // </code>
+  </style>
+  <div id="codeBlock"/>
+`;
 class codeBlock extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(codeBlockTemplate.content.cloneNode(true));
-    const pre = this.shadowRoot.querySelector("pre");
-    const lang = this.getAttribute('lang');
-    const theme = this.getAttribute('theme');
-    const codeText = this.getAttribute('code');
-
-    pre.innerHTML = '<p style="text-align:center">Loading Code Block ...</p>';
-    shiki.getHighlighter({
-      theme: theme
-    }).then(highlighter => {
-      const code = highlighter.codeToHtml(`${codeText}`, { lang: lang })
-      pre.innerHTML = code;
+    const codeBlock = this.shadowRoot.querySelector('#codeBlock');
+    const code = this.getAttribute('code');
+    codeBlock.innerText = code;
+    this.addEventListener("click",function(){
+      navigator.clipboard.writeText(code)
+      alert('Copied to clip board')
     })
   }
 }

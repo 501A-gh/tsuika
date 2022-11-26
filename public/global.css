@@ -6,6 +6,11 @@ body{
   line-height: var(--letterHeight);
   letter-spacing:var(--letterSpacing);
 }
+*::selection{
+  color: var(--textColor0);
+  background: var(--accentColor0)
+}
+
 /* Additional Styles */
 h1{
   color:var(--textColor1);
@@ -57,11 +62,6 @@ a{
 p{
   margin-left: 1%;
   color:var(--textColor1);
-}
-
-p::selection{
-  color: var(--textColor0);
-  background: var(--accentColor0)
 }
 
 code{

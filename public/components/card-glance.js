@@ -85,8 +85,8 @@ class cardGlance extends HTMLElement {
     const openBtn = this.shadowRoot.querySelector(".openBtn");
     const closeBtn = this.shadowRoot.querySelector(".closeBtn");
 
-    openBtn.innerText = this.getAttribute('btnStart');
-    closeBtn.innerText = this.getAttribute('btnEnd');
+    openBtn.innerText = this.getAttribute('btnStart') ? this.getAttribute('btnStart') :'Open';
+    closeBtn.innerText = this.getAttribute('btnEnd') ? this.getAttribute('btnEnd') :'Close';
 
     const fontPixel = this.getAttribute('btnSize') || this.getAttribute('size');
     const btnColor = this.getAttribute('buttonColor') || this.getAttribute('btnColor');

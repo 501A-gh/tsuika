@@ -2,19 +2,19 @@
 const cardCarouselTemplate = document.createElement('template');
 cardCarouselTemplate.innerHTML = `
   <style>
-  section{
-    display: flex;
-    flex-direction: row;
-    padding: calc(var(--padding)/2);
-    gap:1em;
-    overflow-x: auto;
-  }
-  ::slotted(*){
-    width:300px;
-  }
-  ::slotted(table){
-    width:100%;
-  }
+    section{
+      display: flex;
+      flex-direction: row;
+      padding: calc(var(--padding)/2);
+      gap:1em;
+      overflow-x: auto;
+    }
+    ::slotted(*){
+      width:300px;
+    }
+    ::slotted(table){
+      width:100%;
+    }
   </style>
   <section>
     <slot></slot>

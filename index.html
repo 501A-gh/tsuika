@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tsuika</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
     <!-- Tsuika -->
     <link rel="stylesheet" href="./public/global.css"/>
@@ -20,14 +21,12 @@
     <script src="./public/components/card-carousel.js" type="module"></script>
     <script src="./public/components/container-split.js" type="module"></script>
     <script src="./public/components/code-block.js" type="module"></script>
-
-    <!-- Shiki -->
-    <script src="https://unpkg.com/shiki"></script>
 </head>
 <body>
 <card-p type="banner">
     Note before using: Tsuika is still in development so many breaking changes may come in the near future. Please do not use Tsuika for any production or important applications.
 </card-p>
+<img src="./img/tsuikaBanner.png" width="100%"/>
 <header>
     <h1>Tsuika</h1>
     <div>
@@ -35,7 +34,6 @@
         <a href="/features.html">Features</a>
     </div>
 </header>
-<!-- <img src="./img/trimBanner.png" width="100%"/> -->
 <h2>What is Tsuika?</h2>
 <card-p type="quote">
     “Simplicity is the ultimate sophistication.” — Leonardo da Vinci.
@@ -50,15 +48,8 @@
     <h3>Demonstration</h3>
     <p>So what do you mean by "powered by web components?". Well its easier to understand by looking under the hood. The quote label you just saw for instance was made with a single component. (so is the code block component below as well!)</p>
     <code-block
-        theme="nord"
-        lang="javascript"
-        code="
-        &#60;card-p type='quote'&#62;
-            “Simplicity is the ultimate sophistication.” — Leonardo da Vinci.
-        &#60;/card-p&#62;
-        "
-    >
-    </code-block>
+        code="&#60;card-p type='quote'&#62;“Simplicity is the ultimate sophistication.” — Leonardo da Vinci.&#60;/card-p&#62;"
+    />
     <p>
         Like this you don't to style anything because Tsuika does that all for you. And unlike a standard classless CSS framework, Tsuika allows you to add a variety of styles to your static webpages. In otherwords, you can do the thing you meant to do which was focusing on the content.
     </p>
@@ -134,10 +125,8 @@
         </tr>
         <tr>
             <td><code>code-block</code></td>
-            <td>A component to display a your code with syntax highlighting powered by <a href="https://github.com/shikijs/shiki">shiki</a>. All properties derive from the shiki library.</td>
+            <td>A component to display a your code. Clicking the component enables visitors to copy its content.
             <td>
-                <code>lang</code>
-                <code>theme</code>
                 <code>code</code>
             </td>
             <td>String value</td>
